@@ -1,0 +1,3 @@
+rootProject.name = 'pop3example'
+include 'pop3proto'
+

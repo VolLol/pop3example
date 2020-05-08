@@ -1,0 +1,7 @@
+# Project exclude paths
+/.gradle/
+/out/production/classes/
+/out/test/classes/
+/pop3proto/build/
+/pop3proto/out/production/classes/
+/pop3proto/out/test/classes/

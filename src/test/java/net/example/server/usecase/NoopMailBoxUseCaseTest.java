@@ -18,7 +18,6 @@ public class NoopMailBoxUseCaseTest {
         List<String> answer = noopMailBoxUseCase.execute();
         String message = "[" + sessionContext.getClientIP() + "] " + " execute NoopMailBoxUseCase";
 
-
         Assert.assertEquals(1, answer.size());
         Assert.assertEquals("+Ok", answer.get(0));
         Assert.assertEquals("[clientIp]  execute NoopMailBoxUseCase", message);

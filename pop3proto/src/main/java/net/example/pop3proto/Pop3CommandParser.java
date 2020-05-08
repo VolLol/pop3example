@@ -12,11 +12,16 @@ public class Pop3CommandParser {
     final static Pattern noopCommandPattern = Pattern.compile("^(?i)(noop)(?-i)$");
 
     public static Pop3Command parse(String line) {
-        Matcher m = noopCommandPattern.matcher(line);
-        if (m.matches()) {
+        if (chekForNoopCommand(line)) {
             return new Pop3CommandNoop();
         }
 
         throw new Pop3UnknownCommand("Unknown Command");
     }
+
+    private static boolean chekForNoopCommand(String line) {
+        Matcher mNOOP = noopCommandPattern.matcher(line);
+        return mNOOP.matches();
+    }
+
 }

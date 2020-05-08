@@ -2,6 +2,7 @@ package net.example.server.usecases;
 
 import net.example.server.Pop3SessionContext;
 import net.example.server.repositories.MailBoxRepository;
+import net.example.server.repositories.MailEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,16 @@ public class RetrMailBoxUseCase {
     public List<String> execute(int mailIndex) {
         System.out.println("[" + sessionContext.getClientIP() + "] " + " execute RetrMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
+
+        if ((mailIndex < mailBoxRepository.list().size()) && (mailIndex >= 1)) {
+            MailEntity mailEntity = mailBoxRepository.get(mailIndex);
+            result.add(mailEntity.getFrom());
+            result.add(mailEntity.getTo());
+            result.add(mailEntity.getSubject());
+            result.add(mailEntity.getPayload());
+        } else {
+            result.add("-ERR no such message");
+        }
         return result;
     }
 }

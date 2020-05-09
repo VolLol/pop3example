@@ -17,11 +17,17 @@ public class Pop3CommandParser {
         Matcher m = noopCommandPattern.matcher(line);
         if (m.matches()) {
             return new Pop3CommandNoop();
-        } else if (m.usePattern(retrCommandPattern).matches()) {
+        }
+        m = retrCommandPattern.matcher(line);
+        if (m.matches()) {
             int mailIndex = Integer.parseInt(m.group(1));
             return new Pop3CommandRetr(mailIndex);
-        } else if (m.usePattern(topCommandPattern).matches()) {
-            return new Pop3CommandTop(Integer.parseInt(m.group(1)), Integer.parseInt(m.group(2)));
+        }
+        m = topCommandPattern.matcher(line);
+        if (m.usePattern(topCommandPattern).matches()) {
+            int mailIndex = Integer.parseInt(m.group(1));
+            int countLines = Integer.parseInt(m.group(2));
+            return new Pop3CommandTop(mailIndex, countLines);
         }
 
         throw new Pop3UnknownCommand("Unknown Command");

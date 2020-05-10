@@ -22,11 +22,12 @@ public class RetrMailBoxUseCaseTest {
 
         List<String> answer = retrMailBoxUseCase.execute(mailIndex);
 
-        Assert.assertEquals(4, answer.size());
-        Assert.assertEquals(mailEntity.getFrom(), answer.get(0));
-        Assert.assertEquals(mailEntity.getTo(), answer.get(1));
-        Assert.assertEquals(mailEntity.getSubject(), answer.get(2));
-        Assert.assertEquals(mailEntity.getPayload(), answer.get(3));
+        Assert.assertEquals(5, answer.size());
+        Assert.assertEquals("+OK message follows", answer.get(0));
+        Assert.assertEquals(mailEntity.getFrom(), answer.get(1));
+        Assert.assertEquals(mailEntity.getTo(), answer.get(2));
+        Assert.assertEquals(mailEntity.getSubject(), answer.get(3));
+        Assert.assertEquals(mailEntity.getPayload(), answer.get(4));
     }
 
 

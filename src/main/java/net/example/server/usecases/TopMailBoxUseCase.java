@@ -24,6 +24,7 @@ public class TopMailBoxUseCase {
         ArrayList<String> result = new ArrayList<>();
         mailIndex = mailIndex - 1;
         if (mailIndex >= 0 && countLines >= 1 && mailIndex < mailBoxRepository.list().size()) {
+            result.add("+OK top of message follows");
             MailEntity mailEntity = mailBoxRepository.get(mailIndex);
             List<String> mailList = new ArrayList<>();
             mailList.add(mailEntity.getSubject());

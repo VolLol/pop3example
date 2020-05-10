@@ -20,11 +20,13 @@ public class TopMailBoxUseCaseTest {
         TopMailBoxUseCase topMailBoxUseCase = new TopMailBoxUseCase(sessionContext, mailBoxRepository);
         List<String> answer = topMailBoxUseCase.execute(mailIndex, countlines);
 
-        Assert.assertEquals(4, answer.size());
-        Assert.assertEquals("Sample message 1", answer.get(0));
-        Assert.assertEquals("Author <author@example.com>", answer.get(1));
-        Assert.assertEquals("Recipient <recipient@example.com>", answer.get(2));
-        Assert.assertEquals("Notice how each subproject is prefixed in the output, so that you know which task from which project is being executed.", answer.get(3));
+        Assert.assertEquals(5, answer.size());
+        Assert.assertEquals("+OK top of message follows", answer.get(0));
+        Assert.assertEquals("Sample message 1", answer.get(1));
+        Assert.assertEquals("Author <author@example.com>", answer.get(2));
+        Assert.assertEquals("Recipient <recipient@example.com>", answer.get(3));
+        Assert.assertEquals("Notice how each subproject is prefixed in the output," +
+                " so that you know which task from which project is being executed.", answer.get(4));
     }
 
     @Test
@@ -37,12 +39,13 @@ public class TopMailBoxUseCaseTest {
         TopMailBoxUseCase topMailBoxUseCase = new TopMailBoxUseCase(sessionContext, mailBoxRepository);
         List<String> answer = topMailBoxUseCase.execute(mailIndex, countLines);
 
-        Assert.assertEquals(5, answer.size());
-        Assert.assertEquals("Sample message 1", answer.get(0));
-        Assert.assertEquals("Author <author@example.com>", answer.get(1));
-        Assert.assertEquals("Recipient <recipient@example.com>", answer.get(2));
-        Assert.assertEquals("Notice how each subproject is prefixed in the output, so that you know which task from which project is being executed.", answer.get(3));
-        Assert.assertEquals("Also note that Gradle does not process all tasks from one subproject before moving onto another.", answer.get(4));
+        Assert.assertEquals(6, answer.size());
+        Assert.assertEquals("+OK top of message follows", answer.get(0));
+        Assert.assertEquals("Sample message 1", answer.get(1));
+        Assert.assertEquals("Author <author@example.com>", answer.get(2));
+        Assert.assertEquals("Recipient <recipient@example.com>", answer.get(3));
+        Assert.assertEquals("Notice how each subproject is prefixed in the output, so that you know which task from which project is being executed.", answer.get(4));
+        Assert.assertEquals("Also note that Gradle does not process all tasks from one subproject before moving onto another.", answer.get(5));
     }
 
 

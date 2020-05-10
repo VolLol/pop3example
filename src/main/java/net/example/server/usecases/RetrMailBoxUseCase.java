@@ -23,6 +23,7 @@ public class RetrMailBoxUseCase {
         ArrayList<String> result = new ArrayList<>();
 
         if ((mailIndex < mailBoxRepository.list().size()) && (mailIndex >= 1)) {
+            result.add("+OK message follows");
             MailEntity mailEntity = mailBoxRepository.get(mailIndex);
             result.add(mailEntity.getFrom());
             result.add(mailEntity.getTo());

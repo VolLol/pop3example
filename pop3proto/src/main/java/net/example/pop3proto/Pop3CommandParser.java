@@ -10,8 +10,10 @@ import java.util.regex.Pattern;
 public class Pop3CommandParser {
 
     final private static Pattern noopCommandPattern = Pattern.compile("^(?i)(noop)(?-i)$");
-    final private static Pattern retrCommandPattern = Pattern.compile("^(?i)Retr(?-i)\\s(\\d+)$");
-    final private static Pattern topCommandPattern = Pattern.compile("^(?i)Top(?-i)\\s(\\d+)\\s(\\d+)$");
+    final private static Pattern retrCommandPattern = Pattern.compile("^(?i)retr(?-i)\\s(\\d+)$");
+    final private static Pattern topCommandPattern = Pattern.compile("^(?i)top(?-i)\\s(\\d+)\\s(\\d+)$");
+    final private static Pattern apopCommandPattern = Pattern.compile("^(?i)apop(?-i)\\s([a-z0-9A-Z]+)\\s([a-z0-9]{32})$");
+    final private static Pattern listCommandPattern = Pattern.compile("^list\\s?(\\d+|)$");
 
     public static Pop3Command parse(String line) {
         Matcher m = noopCommandPattern.matcher(line);
@@ -24,12 +26,28 @@ public class Pop3CommandParser {
             return new Pop3CommandRetr(mailIndex);
         }
         m = topCommandPattern.matcher(line);
-        if (m.usePattern(topCommandPattern).matches()) {
+        if (m.matches()) {
             int mailIndex = Integer.parseInt(m.group(1));
             int countLines = Integer.parseInt(m.group(2));
             return new Pop3CommandTop(mailIndex, countLines);
         }
 
+        m = apopCommandPattern.matcher(line);
+        if (m.matches()) {
+            String username = m.group(1);
+            String cryptPassword = m.group(2);
+            return new Pop3CommandApop(username, cryptPassword);
+        }
+
+        m = listCommandPattern.matcher(line);
+        if (m.matches()) {
+            try {
+                Integer limit = Integer.parseInt(m.group(1));
+                return new Pop3CommandList(limit);
+            } catch (NumberFormatException e) {
+                return new Pop3CommandList(0);
+            }
+        }
         throw new Pop3UnknownCommand("Unknown Command");
     }
 

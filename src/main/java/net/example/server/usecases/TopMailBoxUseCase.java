@@ -22,26 +22,30 @@ public class TopMailBoxUseCase {
     public List<String> execute(int mailIndex, int countLines) {
         System.out.println("[" + sessionContext.getClientIP() + "] " + " execute TopMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
-        mailIndex = mailIndex - 1;
-        if (mailIndex >= 0 && countLines >= 1 && mailIndex < mailBoxRepository.list().size()) {
-            result.add("+OK top of message follows");
-            MailEntity mailEntity = mailBoxRepository.get(mailIndex);
-            List<String> mailList = new ArrayList<>();
-            mailList.add(mailEntity.getSubject());
-            mailList.add(mailEntity.getFrom());
-            mailList.add(mailEntity.getTo());
+        if (sessionContext.isAuthenticated()) {
+            mailIndex = mailIndex - 1;
+            if (mailIndex >= 0 && countLines >= 1 && mailIndex < mailBoxRepository.list().size()) {
+                result.add("+OK top of message follows");
+                MailEntity mailEntity = mailBoxRepository.get(mailIndex);
+                List<String> mailList = new ArrayList<>();
+                mailList.add(mailEntity.getSubject());
+                mailList.add(mailEntity.getFrom());
+                mailList.add(mailEntity.getTo());
 
-            String stringOfPayload = mailEntity.getPayload();
-            List<String> listOfStringsFromPayload = Arrays.asList(stringOfPayload.split("\n"));
-            if (countLines > listOfStringsFromPayload.size()) {
-                countLines = listOfStringsFromPayload.size();
+                String stringOfPayload = mailEntity.getPayload();
+                List<String> listOfStringsFromPayload = Arrays.asList(stringOfPayload.split("\n"));
+                if (countLines > listOfStringsFromPayload.size()) {
+                    countLines = listOfStringsFromPayload.size();
+                }
+                for (int i = 0; i < countLines; i++) {
+                    mailList.add(listOfStringsFromPayload.get(i));
+                }
+                result.addAll(mailList);
+            } else {
+                result.add("-ERR no such message");
             }
-            for (int i = 0; i < countLines; i++) {
-                mailList.add(listOfStringsFromPayload.get(i));
-            }
-            result.addAll(mailList);
         } else {
-            result.add("-ERR no such message");
+            result.add("-ERR no authentication");
         }
         return result;
     }

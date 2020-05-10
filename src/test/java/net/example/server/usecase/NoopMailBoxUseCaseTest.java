@@ -5,7 +5,6 @@ import net.example.server.usecases.NoopMailBoxUseCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class NoopMailBoxUseCaseTest {

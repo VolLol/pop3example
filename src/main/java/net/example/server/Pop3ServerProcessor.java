@@ -56,7 +56,7 @@ public class Pop3ServerProcessor {
                 System.out.println("[" + sessionContext.getClientIP() + "]" + " detect command = " + command.getCommandType());
 
                 if (command instanceof Pop3CommandList) {
-                    outBuffer.addAll(listMailBoxUseCase.execute());
+                    outBuffer.addAll(listMailBoxUseCase.execute(((Pop3CommandList) command).getLimit()));
                 }
 
                 if (command instanceof Pop3CommandStat) {

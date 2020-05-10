@@ -23,6 +23,20 @@ public class ApopMailBoxUseCase {
     public List<String> execute(String username, String cryptPassword) {
         System.out.println("[" + sessionContext.getClientIP() + "] " + " execute ApopMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
+        UserEntity user = userRepository.getUserByUsername(username);
+        if (user != null) {
+            MailBoxRepository mailBoxRepository = new MailBoxRepository();
+            int countOfMessage = mailBoxRepository.list().size();
+            String passwordFromdb = DigestUtils.md5Hex(user.getClearPassword());
+            if (passwordFromdb.equals(cryptPassword)) {
+                sessionContext.setAuthenticated(true);
+                result.add("+OK maildrop has " + countOfMessage + " message");
+            } else {
+                result.add("-ERR password supplied for " + username + " is incorrect");
+            }
+        } else {
+            result.add("-ERR User with name " + username + " not exist");
+        }
         return result;
     }
 }

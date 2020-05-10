@@ -16,6 +16,7 @@ public class TopMailBoxUseCaseTest {
         int countlines = 1;
         String clientIP = "clientIP";
         Pop3SessionContext sessionContext = new Pop3SessionContext(clientIP);
+        sessionContext.setAuthenticated(true);
         MailBoxRepository mailBoxRepository = new MailBoxRepository();
         TopMailBoxUseCase topMailBoxUseCase = new TopMailBoxUseCase(sessionContext, mailBoxRepository);
         List<String> answer = topMailBoxUseCase.execute(mailIndex, countlines);
@@ -35,6 +36,7 @@ public class TopMailBoxUseCaseTest {
         int countLines = 10;
         String clientIP = "clientIP";
         Pop3SessionContext sessionContext = new Pop3SessionContext(clientIP);
+        sessionContext.setAuthenticated(true);
         MailBoxRepository mailBoxRepository = new MailBoxRepository();
         TopMailBoxUseCase topMailBoxUseCase = new TopMailBoxUseCase(sessionContext, mailBoxRepository);
         List<String> answer = topMailBoxUseCase.execute(mailIndex, countLines);
@@ -50,11 +52,12 @@ public class TopMailBoxUseCaseTest {
 
 
     @Test
-    public void incorrectAnswer() {
+    public void incorrectAnswer1() {
         int mailIndex = -3;
         int countLines = 13;
         String clientIP = "clientIP";
         Pop3SessionContext sessionContext = new Pop3SessionContext(clientIP);
+        sessionContext.setAuthenticated(true);
         MailBoxRepository mailBoxRepository = new MailBoxRepository();
         TopMailBoxUseCase topMailBoxUseCase = new TopMailBoxUseCase(sessionContext, mailBoxRepository);
         List<String> answer = topMailBoxUseCase.execute(mailIndex, countLines);
@@ -69,6 +72,7 @@ public class TopMailBoxUseCaseTest {
         int countLines = 13;
         String clientIP = "clientIP";
         Pop3SessionContext sessionContext = new Pop3SessionContext(clientIP);
+        sessionContext.setAuthenticated(true);
         MailBoxRepository mailBoxRepository = new MailBoxRepository();
         TopMailBoxUseCase topMailBoxUseCase = new TopMailBoxUseCase(sessionContext, mailBoxRepository);
         List<String> answer = topMailBoxUseCase.execute(mailIndex, countLines);
@@ -77,4 +81,19 @@ public class TopMailBoxUseCaseTest {
         Assert.assertEquals("-ERR no such message", answer.get(0));
     }
 
+    @Test
+    public void notAutentificated() {
+        int mailIndex = 3;
+        int countLines = 3;
+        String clientIP = "clientIP";
+        Pop3SessionContext sessionContext = new Pop3SessionContext(clientIP);
+        sessionContext.setAuthenticated(false);
+        MailBoxRepository mailBoxRepository = new MailBoxRepository();
+        TopMailBoxUseCase topMailBoxUseCase = new TopMailBoxUseCase(sessionContext, mailBoxRepository);
+        List<String> answer = topMailBoxUseCase.execute(mailIndex, countLines);
+
+        Assert.assertEquals(1, answer.size());
+        Assert.assertEquals("-ERR no authentication", answer.get(0));
+
+    }
 }

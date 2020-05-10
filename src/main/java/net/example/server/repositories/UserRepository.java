@@ -19,6 +19,12 @@ public class UserRepository {
     }
 
     public UserEntity getUserByUsername(String username) {
-        return users.get(0);
+        UserEntity userEntity = null;
+        for (UserEntity u : users) {
+            if (u.getUsername().equals(username)) {
+                userEntity = u;
+            }
+        }
+        return userEntity;
     }
 }

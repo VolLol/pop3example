@@ -92,4 +92,48 @@ public class Pop3CommandParserTest {
         Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
         pop3CommandParser.parse("retr");
     }
+
+    @Test
+    public void correctCommandApop() {
+        Pop3CommandApop pop3CommandApop = new Pop3CommandApop("user1", "7c6a180b36896a0a8c02787eeafb0e4c");
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3Command = pop3CommandParser.parse("apop user1 7c6a180b36896a0a8c02787eeafb0e4c");
+
+        Assert.assertEquals(pop3CommandApop.getCommandType(), pop3Command.getCommandType());
+    }
+
+    @Test(expected = Pop3UnknownCommand.class)
+    public void incorrectCommandApop() {
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3Command = pop3CommandParser.parse("apop user1 7c6a180jdjjdjdb36896sdsdsa0a8c02787eeafb0e4c");
+    }
+
+    @Test
+    public void correctCommandList1() {
+        Pop3CommandList pop3CommandList = new Pop3CommandList(2);
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3Command = pop3CommandParser.parse("list 2");
+
+        Assert.assertEquals(pop3CommandList.getCommandType(), pop3Command.getCommandType());
+    }
+
+    @Test
+    public void correctCommandList2() {
+        Pop3CommandList pop3CommandList = new Pop3CommandList(2);
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3Command = pop3CommandParser.parse("list 0");
+
+        Assert.assertEquals(pop3CommandList.getCommandType(), pop3Command.getCommandType());
+    }
+
+
+    @Test
+    public void correctCommandList3() {
+        Pop3CommandList pop3CommandList = new Pop3CommandList(2);
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3Command = pop3CommandParser.parse("list");
+
+        Assert.assertEquals(pop3CommandList.getCommandType(), pop3Command.getCommandType());
+    }
+
 }

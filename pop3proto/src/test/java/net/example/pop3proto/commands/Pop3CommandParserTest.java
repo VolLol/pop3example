@@ -46,7 +46,7 @@ public class Pop3CommandParserTest {
     }
 
     @Test(expected = Pop3UnknownCommand.class)
-    public void inCorrectCommandNoop() {
+    public void incorrectCommandNoop() {
         Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
         pop3CommandParser.parse("nop");
     }
@@ -134,6 +134,30 @@ public class Pop3CommandParserTest {
         Pop3Command pop3Command = pop3CommandParser.parse("list");
 
         Assert.assertEquals(pop3CommandList.getCommandType(), pop3Command.getCommandType());
+    }
+
+    @Test
+    public void correctCommandDele1() {
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3CommandDele pop3CommandDele = new Pop3CommandDele(5);
+        Pop3Command pop3Command = pop3CommandParser.parse("dele 5");
+
+        Assert.assertEquals(pop3CommandDele.getCommandType(), pop3Command.getCommandType());
+    }
+
+    @Test
+    public void correctCommandDele2() {
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3CommandDele pop3CommandDele = new Pop3CommandDele(2);
+        Pop3Command pop3Command = pop3CommandParser.parse("DELE 2");
+
+        Assert.assertEquals(pop3CommandDele.getCommandType(), pop3Command.getCommandType());
+    }
+
+    @Test(expected = Pop3UnknownCommand.class)
+    public void incorrectCommandDele() {
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        pop3CommandParser.parse("dele");
     }
 
 }

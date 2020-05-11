@@ -22,30 +22,41 @@ public class ListMailBoxUseCase {
         System.out.println("[" + sessionContext.getClientIP() + "] " + " execute ListMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
-            List<MailEntity> list = mailBoxRepository.list();
-            int countOfMessage = mailBoxRepository.list().size();
-            int intCount;
-            int allCountOfBites = 0;
-            List<Integer> sizeOfMessage = new ArrayList<>();
-            for (MailEntity mailEntity : list) {
-                intCount = mailEntity.getSubject().getBytes().length;
-                intCount = intCount + mailEntity.getFrom().getBytes().length;
-                intCount = intCount + mailEntity.getTo().getBytes().length;
-                intCount = intCount + mailEntity.getPayload().getBytes().length;
-                allCountOfBites = allCountOfBites + intCount;
-                sizeOfMessage.add(intCount);
+            List<MailEntity> list = new ArrayList<>();
+
+            for (MailEntity m : mailBoxRepository.list()) {
+                if (!m.isDeleted()) {
+                    list.add(m);
+                }
             }
-            result.add("+OK " + countOfMessage + " " + allCountOfBites);
-
-            if (limit == 0) {
-                for (int i = 0; i < sizeOfMessage.size(); i++) {
-                    result.add(i + 1 + " " + sizeOfMessage.get(i));
-
+            if (!list.isEmpty()) {
+                int countOfMessage = list.size();
+                int intCount;
+                int allCountOfBites = 0;
+                List<Integer> sizeOfMessage = new ArrayList<>();
+                for (MailEntity mailEntity : list) {
+                    intCount = mailEntity.getSubject().getBytes().length;
+                    intCount = intCount + mailEntity.getFrom().getBytes().length;
+                    intCount = intCount + mailEntity.getTo().getBytes().length;
+                    intCount = intCount + mailEntity.getPayload().getBytes().length;
+                    allCountOfBites = allCountOfBites + intCount;
+                    sizeOfMessage.add(intCount);
                 }
+                result.add("+OK " + countOfMessage + " " + allCountOfBites);
+
+                if (limit == 0) {
+                    for (int i = 0; i < sizeOfMessage.size(); i++) {
+                        result.add(i + 1 + " " + sizeOfMessage.get(i));
+
+                    }
+                } else {
+                    for (int i = 0; i < limit; i++) {
+                        result.add(i + 1 + " " + sizeOfMessage.get(i));
+                    }
+                }
+
             } else {
-                for (int i = 0; i < limit; i++) {
-                    result.add(i + 1 + " " + sizeOfMessage.get(i));
-                }
+                result.add("-ERR no messages");
             }
 
 

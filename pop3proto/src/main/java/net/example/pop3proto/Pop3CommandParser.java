@@ -14,6 +14,7 @@ public class Pop3CommandParser {
     final private static Pattern topCommandPattern = Pattern.compile("^(?i)top(?-i)\\s(\\d+)\\s(\\d+)$");
     final private static Pattern apopCommandPattern = Pattern.compile("^(?i)apop(?-i)\\s([a-z0-9A-Z]+)\\s([a-z0-9]{32})$");
     final private static Pattern listCommandPattern = Pattern.compile("^list\\s?(\\d+|)$");
+    final private static Pattern deleCommandPattern = Pattern.compile("^(?i)dele(?-i)\\s(\\d)");
 
     public static Pop3Command parse(String line) {
         Matcher m = noopCommandPattern.matcher(line);
@@ -47,6 +48,12 @@ public class Pop3CommandParser {
             } catch (NumberFormatException e) {
                 return new Pop3CommandList(0);
             }
+        }
+
+        m = deleCommandPattern.matcher(line);
+        if (m.matches()) {
+            int mailIndex = Integer.parseInt(m.group(1));
+            return new Pop3CommandDele(mailIndex);
         }
         throw new Pop3UnknownCommand("Unknown Command");
     }

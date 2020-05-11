@@ -62,7 +62,7 @@ public class MailBoxRepository {
     }
 
     public void delete(int index) {
-        mailsInMailBox.remove(index);
+        mailsInMailBox.get(index).setDeleted(true);
     }
 
     public MailEntity get(int index) {

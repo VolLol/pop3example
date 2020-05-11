@@ -1,2 +1,2 @@
 # pop3example
-https://travis-ci.com/VolLol/pop3example.svg?branch=master
+[![Build Status](https://travis-ci.com/VolLol/pop3example.svg?branch=master)](https://travis-ci.com/VolLol/pop3example)

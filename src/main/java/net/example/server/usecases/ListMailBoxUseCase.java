@@ -46,12 +46,12 @@ public class ListMailBoxUseCase {
 
                 if (limit == 0) {
                     for (int i = 0; i < sizeOfMessage.size(); i++) {
-                        result.add(i + 1 + " " + sizeOfMessage.get(i));
+                        result.add(list.get(i).getId() + " " + sizeOfMessage.get(i));
 
                     }
                 } else {
                     for (int i = 0; i < limit; i++) {
-                        result.add(i + 1 + " " + sizeOfMessage.get(i));
+                        result.add(list.get(i).getId() + " " + sizeOfMessage.get(i));
                     }
                 }
 

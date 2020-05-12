@@ -84,7 +84,7 @@ public class ListMailBoxUseCaseTest {
         Assert.assertEquals("+OK 3 1238", answer.get(0));
         Assert.assertEquals("1 293", answer.get(1));
         Assert.assertEquals("2 293", answer.get(2));
-        Assert.assertEquals("3 652", answer.get(3));
+        Assert.assertEquals("6 652", answer.get(3));
     }
 
 

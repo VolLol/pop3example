@@ -15,6 +15,7 @@ public class Pop3CommandParser {
     final private static Pattern apopCommandPattern = Pattern.compile("^(?i)apop(?-i)\\s([a-z0-9A-Z]+)\\s([a-z0-9]{32})$");
     final private static Pattern listCommandPattern = Pattern.compile("^list\\s?(\\d+|)$");
     final private static Pattern deleCommandPattern = Pattern.compile("^(?i)dele(?-i)\\s(\\d)");
+    final private static Pattern rsetCpmmandPattern = Pattern.compile("^(?i)rset(?-i)$");
 
     public static Pop3Command parse(String line) {
         Matcher m = noopCommandPattern.matcher(line);
@@ -54,6 +55,11 @@ public class Pop3CommandParser {
         if (m.matches()) {
             int mailIndex = Integer.parseInt(m.group(1));
             return new Pop3CommandDele(mailIndex);
+        }
+
+        m = rsetCpmmandPattern.matcher(line);
+        if (m.matches()) {
+            return new Pop3CommandRset();
         }
         throw new Pop3UnknownCommand("Unknown Command");
     }

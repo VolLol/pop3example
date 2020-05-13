@@ -160,4 +160,13 @@ public class Pop3CommandParserTest {
         pop3CommandParser.parse("dele");
     }
 
+    @Test
+    public void correctCommandRset() {
+        Pop3CommandRset pop3CommandNoop = new Pop3CommandRset();
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3CommandResult = pop3CommandParser.parse("rset");
+
+        Assert.assertSame(pop3CommandNoop.getCommandType(), pop3CommandResult.getCommandType());
+    }
+
 }

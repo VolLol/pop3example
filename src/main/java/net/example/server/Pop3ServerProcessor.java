@@ -23,6 +23,8 @@ public class Pop3ServerProcessor {
     private final RetrMailBoxUseCase retrMailBoxUseCase;
     private final DeleMailBoxUseCase deleMailBoxUseCase;
     private final ApopMailBoxUseCase apopMailBoxUseCase;
+    private final RsetMailBoxUseCase rsetMailBoxUseCase;
+
 
     public Pop3ServerProcessor(Pop3SessionContext sessionContext, BufferedReader socketIn, PrintWriter socketOut) {
         this.socketIn = socketIn;
@@ -37,6 +39,7 @@ public class Pop3ServerProcessor {
         this.deleMailBoxUseCase = new DeleMailBoxUseCase(sessionContext, mailBoxRepository);
         this.apopMailBoxUseCase = new ApopMailBoxUseCase(sessionContext, userRepository);
         this.noopMailBoxUseCase = new NoopMailBoxUseCase(sessionContext);
+        this.rsetMailBoxUseCase = new RsetMailBoxUseCase(sessionContext, mailBoxRepository);
     }
 
     public void execute() throws IOException {
@@ -84,6 +87,9 @@ public class Pop3ServerProcessor {
                     outBuffer.addAll(apopMailBoxUseCase.execute(((Pop3CommandApop) command).getUsername(), ((Pop3CommandApop) command).getCryptPassword()));
                 }
 
+                if (command instanceof Pop3CommandRset) {
+                    outBuffer.addAll(rsetMailBoxUseCase.execute());
+                }
                 for (String data : outBuffer) {
                     socketOut.println(data);
                 }

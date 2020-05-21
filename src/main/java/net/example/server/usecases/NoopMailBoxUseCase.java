@@ -1,7 +1,6 @@
 package net.example.server.usecases;
 
 import net.example.server.Pop3SessionContext;
-import net.example.server.repositories.MailBoxRepository;
 
 import java.util.ArrayList;
 import java.util.List;

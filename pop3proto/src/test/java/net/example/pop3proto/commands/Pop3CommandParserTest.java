@@ -7,40 +7,10 @@ import org.junit.Test;
 
 public class Pop3CommandParserTest {
     @Test
-    public void correctCommandNoop1() {
+    public void correctCommandNoop() {
         Pop3CommandNoop pop3CommandNoop = new Pop3CommandNoop();
         Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
-        Pop3Command pop3CommandNoopResult = pop3CommandParser.parse("noop");
-
-        Assert.assertSame(pop3CommandNoop.getCommandType(), pop3CommandNoopResult.getCommandType());
-    }
-
-    @Test
-    public void correctCommandNoop2() {
-        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
-        Pop3CommandNoop pop3CommandNoop = new Pop3CommandNoop();
-
         Pop3Command pop3CommandNoopResult = pop3CommandParser.parse("NOOP");
-
-        Assert.assertSame(pop3CommandNoop.getCommandType(), pop3CommandNoopResult.getCommandType());
-    }
-
-    @Test
-    public void correctCommandNoop3() {
-        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
-        Pop3CommandNoop pop3CommandNoop = new Pop3CommandNoop();
-
-        Pop3Command pop3CommandNoopResult = pop3CommandParser.parse("Noop");
-
-        Assert.assertSame(pop3CommandNoop.getCommandType(), pop3CommandNoopResult.getCommandType());
-    }
-
-    @Test
-    public void correctCommandNoop4() {
-        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
-        Pop3CommandNoop pop3CommandNoop = new Pop3CommandNoop();
-
-        Pop3Command pop3CommandNoopResult = pop3CommandParser.parse("nOOp");
 
         Assert.assertSame(pop3CommandNoop.getCommandType(), pop3CommandNoopResult.getCommandType());
     }
@@ -162,11 +132,65 @@ public class Pop3CommandParserTest {
 
     @Test
     public void correctCommandRset() {
-        Pop3CommandRset pop3CommandNoop = new Pop3CommandRset();
+        Pop3CommandRset pop3Command = new Pop3CommandRset();
         Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
         Pop3Command pop3CommandResult = pop3CommandParser.parse("rset");
 
-        Assert.assertSame(pop3CommandNoop.getCommandType(), pop3CommandResult.getCommandType());
+        Assert.assertSame(pop3Command.getCommandType(), pop3CommandResult.getCommandType());
     }
 
+    @Test
+    public void correctCommandUser() {
+        Pop3CommandUser pop3Command = new Pop3CommandUser("user1");
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3CommandResult = pop3CommandParser.parse("user user1");
+
+        Assert.assertSame(pop3Command.getCommandType(), pop3CommandResult.getCommandType());
+    }
+
+    @Test
+    public void correctCommandPass() {
+        Pop3CommandPass pop3Command = new Pop3CommandPass("7c6a180b36896a0a8c02787eeafb0e4c");
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3CommandResult = pop3CommandParser.parse("pass 7c6a180b36896a0a8c02787eeafb0e4c");
+
+        Assert.assertSame(pop3Command.getCommandType(), pop3CommandResult.getCommandType());
+    }
+
+    @Test(expected = Pop3UnknownCommand.class)
+    public void incorrectCommandPass() {
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        pop3CommandParser.parse("pass 7c6a180b3689jksdjuisdfphsdj;fwosjc;6a0a8c02787eeafb0e4c");
+
+    }
+
+    @Test
+    public void correctCommandQuit() {
+        Pop3CommandQuit pop3Command = new Pop3CommandQuit();
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3CommandResult = pop3CommandParser.parse("quit");
+
+        Assert.assertSame(pop3Command.getCommandType(), pop3CommandResult.getCommandType());
+    }
+
+    @Test(expected = Pop3UnknownCommand.class)
+    public void incorrectCommandQuit() {
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        pop3CommandParser.parse("quittt");
+    }
+
+    @Test
+    public void correctCommandStat() {
+        Pop3CommandStat pop3Command = new Pop3CommandStat();
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        Pop3Command pop3CommandResult = pop3CommandParser.parse("STAT");
+
+        Assert.assertSame(pop3Command.getCommandType(), pop3CommandResult.getCommandType());
+    }
+
+    @Test(expected = Pop3UnknownCommand.class)
+    public void incorrectCommandStat() {
+        Pop3CommandParser pop3CommandParser = new Pop3CommandParser();
+        pop3CommandParser.parse("statusS");
+    }
 }

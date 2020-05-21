@@ -5,7 +5,6 @@ import net.example.server.repositories.MailBoxRepository;
 import net.example.server.repositories.MailEntity;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class RetrMailBoxUseCase {

@@ -24,7 +24,9 @@ public class Pop3ServerProcessor {
     private final DeleMailBoxUseCase deleMailBoxUseCase;
     private final ApopMailBoxUseCase apopMailBoxUseCase;
     private final RsetMailBoxUseCase rsetMailBoxUseCase;
-
+    private final UserMailBoxUseCase userMailBoxUseCase;
+    private final PassMailBoxUseCase passMailBoxUseCase;
+    private final QuitMailBoxUsecase quitMailBoxUsecase;
 
     public Pop3ServerProcessor(Pop3SessionContext sessionContext, BufferedReader socketIn, PrintWriter socketOut) {
         this.socketIn = socketIn;
@@ -40,6 +42,9 @@ public class Pop3ServerProcessor {
         this.apopMailBoxUseCase = new ApopMailBoxUseCase(sessionContext, userRepository);
         this.noopMailBoxUseCase = new NoopMailBoxUseCase(sessionContext);
         this.rsetMailBoxUseCase = new RsetMailBoxUseCase(sessionContext, mailBoxRepository);
+        this.userMailBoxUseCase = new UserMailBoxUseCase(sessionContext, userRepository);
+        this.passMailBoxUseCase = new PassMailBoxUseCase(sessionContext);
+        this.quitMailBoxUsecase = new QuitMailBoxUsecase(sessionContext, mailBoxRepository);
     }
 
     public void execute() throws IOException {
@@ -56,6 +61,7 @@ public class Pop3ServerProcessor {
                 outBuffer.clear();
 
                 Pop3Command command = Pop3CommandParser.parse(readLine);
+                System.out.println("[" + sessionContext.getClientIP() + "]" + " state is " + sessionContext.getSessionState());
                 System.out.println("[" + sessionContext.getClientIP() + "]" + " detect command = " + command.getCommandType());
 
                 if (command instanceof Pop3CommandList) {
@@ -90,6 +96,19 @@ public class Pop3ServerProcessor {
                 if (command instanceof Pop3CommandRset) {
                     outBuffer.addAll(rsetMailBoxUseCase.execute());
                 }
+
+                if (command instanceof Pop3CommandUser) {
+                    outBuffer.addAll(userMailBoxUseCase.execute(((Pop3CommandUser) command).getUsername()));
+                }
+
+                if (command instanceof Pop3CommandPass) {
+                    outBuffer.addAll(passMailBoxUseCase.execute(((Pop3CommandPass) command).getCryptPassword()));
+                }
+
+                if (command instanceof Pop3CommandQuit) {
+                    outBuffer.addAll(quitMailBoxUsecase.execute());
+                }
+
                 for (String data : outBuffer) {
                     socketOut.println(data);
                 }

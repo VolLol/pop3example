@@ -10,5 +10,6 @@ public enum Pop3CommandType {
     RETR,
     RSET,
     STAT,
-    TOP
+    TOP,
+    QUIT
 }

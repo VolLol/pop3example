@@ -18,7 +18,7 @@ public class PassMailBoxUseCase {
 
 
     public List<String> execute(String cryptPassword) {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute PassMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute PassMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         UserEntity user = sessionContext.getUser();
         if (user != null) {
@@ -32,7 +32,7 @@ public class PassMailBoxUseCase {
                     result.add("-ERR incorrect pass");
                 }
             } else {
-                System.out.println("[" + sessionContext.getClientIP() + "] " + " User has incorrect state. Actual: " + sessionContext.getSessionState() + " Expected WAITPASS ");
+                System.out.println("[" + sessionContext.getClientIP() + "] " + "User has incorrect state. Actual: " + sessionContext.getSessionState() + " Expected WAITPASS ");
                 result.add("-ERR incorrect state");
             }
         } else {

@@ -17,7 +17,7 @@ public class QuitMailBoxUsecase {
     }
 
     public List<String> execute() {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute QuitMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute QuitMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.getUser() != null) {
             sessionContext.setAuthenticated(false);

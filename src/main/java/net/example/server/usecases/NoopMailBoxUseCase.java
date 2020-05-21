@@ -14,7 +14,7 @@ public class NoopMailBoxUseCase {
     }
 
     public List<String> execute() {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute NoopMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute NoopMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         result.add("+Ok");
         return result;

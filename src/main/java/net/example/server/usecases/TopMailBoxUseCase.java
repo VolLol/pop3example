@@ -20,7 +20,7 @@ public class TopMailBoxUseCase {
     }
 
     public List<String> execute(int mailIndex, int countLines) {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute TopMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute TopMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
             mailIndex = mailIndex - 1;

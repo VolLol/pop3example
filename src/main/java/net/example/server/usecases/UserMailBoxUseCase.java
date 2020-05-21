@@ -19,7 +19,7 @@ public class UserMailBoxUseCase {
     }
 
     public List<String> execute(String username) {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute UserMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute UserMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
 
         UserEntity userEntity = userRepository.getUserByUsername(username);
@@ -29,7 +29,7 @@ public class UserMailBoxUseCase {
                 sessionContext.setSessionStateWAITPASS();
                 sessionContext.setUser(userEntity);
             } else {
-                System.out.println("[" + sessionContext.getClientIP() + "] " + " User has incorrect state. Actual: " + sessionContext.getSessionState() + " Expected NOAUTHORIZATION ");
+                System.out.println("[" + sessionContext.getClientIP() + "] " + "User has incorrect state. Actual: " + sessionContext.getSessionState() + " Expected NOAUTHORIZATION ");
                 result.add("-ERR not correct state");
             }
         } else {

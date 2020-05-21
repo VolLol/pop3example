@@ -19,7 +19,7 @@ public class ListMailBoxUseCase {
     }
 
     public List<String> execute(Integer limit) {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute ListMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute ListMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
             List<MailEntity> list = new ArrayList<>();

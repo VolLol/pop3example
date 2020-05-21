@@ -18,7 +18,7 @@ public class DeleMailBoxUseCase {
     }
 
     public List<String> execute(int mailIndex) {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute DeleMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute DeleMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
             if (mailIndex < mailBoxRepository.list().size() && mailIndex != 0) {

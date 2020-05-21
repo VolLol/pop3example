@@ -24,7 +24,6 @@ public class RsetMailBoxUseCase {
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
             List<MailEntity> listOfAllMails = mailBoxRepository.list();
-            System.out.println("Start");
             for (MailEntity m : listOfAllMails) {
                 if (m.isDeleted()) {
                     m.setDeleted(false);

@@ -107,6 +107,8 @@ public class Pop3ServerProcessor {
 
                 if (command instanceof Pop3CommandQuit) {
                     outBuffer.addAll(quitMailBoxUsecase.execute());
+                    socketIn.close();
+                    socketOut.close();
                 }
 
                 for (String data : outBuffer) {
@@ -117,6 +119,7 @@ public class Pop3ServerProcessor {
                 socketOut.println("-ERR unknown command");
             }
             socketOut.flush();
+
         }
     }
 

@@ -25,6 +25,21 @@ public class StatMailBoxUseCaseTest {
     }
 
     @Test
+    public void correctStatusWithDeletedMessages() {
+        String clientIp = "clientIp";
+        Pop3SessionContext sessionContext = new Pop3SessionContext(clientIp);
+        sessionContext.setAuthenticated(true);
+        MailBoxRepository mailBoxRepository = new MailBoxRepository();
+        mailBoxRepository.get(3).setDeleted(true);
+        StatMailBoxUseCase statMailBoxUseCaseTest = new StatMailBoxUseCase(sessionContext, mailBoxRepository);
+
+        List<String> answer = statMailBoxUseCaseTest.execute();
+
+        Assert.assertEquals(1, answer.size());
+        Assert.assertEquals("+OK 5 1824", answer.get(0));
+    }
+
+    @Test
     public void notAuthenticated() {
         String clientIp = "clientIp";
         Pop3SessionContext sessionContext = new Pop3SessionContext(clientIp);

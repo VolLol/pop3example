@@ -58,7 +58,7 @@ public class PassMailBoxUseCaseTest {
         List<String> answer = passMailBoxUseCase.execute("7c6a180b36896a0a8c02787eeafb0e4c");
 
         Assert.assertEquals(1, answer.size());
-        Assert.assertEquals("-ERR incorrect state", answer.get(0));
+        Assert.assertEquals("-ERR incorrect state, write another command", answer.get(0));
         Assert.assertEquals(Pop3StateType.NOAUTHORIZATION, sessionContext.getSessionState());
     }
 

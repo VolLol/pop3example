@@ -33,7 +33,7 @@ public class PassMailBoxUseCase {
                 }
             } else {
                 System.out.println("[" + sessionContext.getClientIP() + "] " + "User has incorrect state. Actual: " + sessionContext.getSessionState() + " Expected WAITPASS ");
-                result.add("-ERR incorrect state");
+                result.add("-ERR incorrect state, write another command");
             }
         } else {
             result.add("-ERR user not write username");

@@ -75,6 +75,6 @@ public class ApopMailBoxUseCaseTest {
         List<String> answer = apopMailBoxUseCase.execute(username, cryptPassword);
 
         Assert.assertEquals(1, answer.size());
-        Assert.assertEquals("-ERR incorrect state", answer.get(0));
+        Assert.assertEquals("-ERR incorrect state, write another command", answer.get(0));
     }
 }

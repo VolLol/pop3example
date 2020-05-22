@@ -18,23 +18,25 @@ public class StatMailBoxUseCase {
     }
 
     public List<String> execute() {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute StatMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute StatMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
 
-            int countOfMails = mailBoxRepository.list().size();
-
             List<MailEntity> list = mailBoxRepository.list();
+
+            int countOfMails = 0;
             int intCount;
             int allCountOfBites = 0;
             for (MailEntity mailEntity : list) {
-                intCount = mailEntity.getSubject().getBytes().length;
-                intCount = intCount + mailEntity.getFrom().getBytes().length;
-                intCount = intCount + mailEntity.getTo().getBytes().length;
-                intCount = intCount + mailEntity.getPayload().getBytes().length;
-                allCountOfBites = allCountOfBites + intCount;
+                if (!mailEntity.isDeleted()) {
+                    intCount = mailEntity.getSubject().getBytes().length;
+                    intCount = intCount + mailEntity.getFrom().getBytes().length;
+                    intCount = intCount + mailEntity.getTo().getBytes().length;
+                    intCount = intCount + mailEntity.getPayload().getBytes().length;
+                    allCountOfBites = allCountOfBites + intCount;
+                    countOfMails++;
+                }
             }
-
             result.add("+OK " + countOfMails + " " + allCountOfBites);
         } else {
             result.add("-ERR user not authenticated");

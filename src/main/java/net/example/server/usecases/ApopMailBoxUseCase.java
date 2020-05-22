@@ -44,7 +44,7 @@ public class ApopMailBoxUseCase {
             }
         } else {
             System.out.println("[" + sessionContext.getClientIP() + "] " + " User has incorrect state. Actual: " + sessionContext.getSessionState() + " Expected NOAUTHORIZATION ");
-            result.add("-ERR incorrect state");
+            result.add("-ERR incorrect state, write another command");
         }
         return result;
     }

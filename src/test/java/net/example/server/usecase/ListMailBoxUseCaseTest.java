@@ -86,7 +86,26 @@ public class ListMailBoxUseCaseTest {
         Assert.assertEquals("2 293", answer.get(2));
         Assert.assertEquals("6 652", answer.get(3));
     }
+    @Test
+    public void correctAnswerLimitMoreThenMessagesCount() {
+        String clientIP = "clientIP";
+        Integer limit = 10;
+        Pop3SessionContext sessionContext = new Pop3SessionContext(clientIP);
+        sessionContext.setAuthenticated(true);
+        MailBoxRepository mailBoxRepository = new MailBoxRepository();
+        ListMailBoxUseCase listMailBoxUseCase = new ListMailBoxUseCase(sessionContext, mailBoxRepository);
 
+        List<String> answer = listMailBoxUseCase.execute(limit);
+
+        Assert.assertEquals(7, answer.size());
+        Assert.assertEquals("+OK 6 2117", answer.get(0));
+        Assert.assertEquals("1 293", answer.get(1));
+        Assert.assertEquals("2 293", answer.get(2));
+        Assert.assertEquals("3 293", answer.get(3));
+        Assert.assertEquals("4 293", answer.get(4));
+        Assert.assertEquals("5 293", answer.get(5));
+        Assert.assertEquals("6 652", answer.get(6));
+    }
 
     @Test
     public void correctAnswerWithAllDeletedMessages() {

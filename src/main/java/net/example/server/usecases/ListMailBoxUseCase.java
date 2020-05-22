@@ -43,11 +43,13 @@ public class ListMailBoxUseCase {
                     sizeOfMessage.add(intCount);
                 }
                 result.add("+OK " + countOfMessage + " " + allCountOfBites);
+                if (limit > list.size()) {
+                    limit = list.size();
+                }
 
                 if (limit == 0) {
                     for (int i = 0; i < sizeOfMessage.size(); i++) {
                         result.add(list.get(i).getId() + " " + sizeOfMessage.get(i));
-
                     }
                 } else {
                     for (int i = 0; i < limit; i++) {

@@ -50,7 +50,23 @@ public class TopMailBoxUseCaseTest {
         Assert.assertEquals("Also note that Gradle does not process all tasks from one subproject before moving onto another.", answer.get(5));
     }
 
+    @Test
+    public void correctAnswerWithCountLinesZero() {
+        int mailIndex = 1;
+        int countlines = 0;
+        String clientIP = "clientIP";
+        Pop3SessionContext sessionContext = new Pop3SessionContext(clientIP);
+        sessionContext.setAuthenticated(true);
+        MailBoxRepository mailBoxRepository = new MailBoxRepository();
+        TopMailBoxUseCase topMailBoxUseCase = new TopMailBoxUseCase(sessionContext, mailBoxRepository);
+        List<String> answer = topMailBoxUseCase.execute(mailIndex, countlines);
 
+        Assert.assertEquals(4, answer.size());
+        Assert.assertEquals("+OK top of message follows", answer.get(0));
+        Assert.assertEquals("Sample message 1", answer.get(1));
+        Assert.assertEquals("Author <author@example.com>", answer.get(2));
+        Assert.assertEquals("Recipient <recipient@example.com>", answer.get(3));
+    }
     @Test
     public void incorrectAnswer1() {
         int mailIndex = -3;

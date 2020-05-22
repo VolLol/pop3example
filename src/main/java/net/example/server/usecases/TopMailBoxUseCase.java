@@ -23,23 +23,25 @@ public class TopMailBoxUseCase {
         System.out.println("[" + sessionContext.getClientIP() + "] " + "execute TopMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
-            mailIndex = mailIndex - 1;
-            if (mailIndex >= 0 && countLines >= 1 && mailIndex < mailBoxRepository.list().size()) {
+            if (mailIndex > 0 && mailIndex < mailBoxRepository.list().size()) {
                 result.add("+OK top of message follows");
-                MailEntity mailEntity = mailBoxRepository.get(mailIndex);
+                MailEntity mailEntity = mailBoxRepository.getById(mailIndex);
                 List<String> mailList = new ArrayList<>();
                 mailList.add(mailEntity.getSubject());
                 mailList.add(mailEntity.getFrom());
                 mailList.add(mailEntity.getTo());
+                List<String> listOfStringsFromPayload = new ArrayList<>();
+                if (countLines != 0) {
+                    String stringOfPayload = mailEntity.getPayload();
+                    listOfStringsFromPayload = Arrays.asList(stringOfPayload.split("\n"));
+                    if (countLines > listOfStringsFromPayload.size()) {
+                        countLines = listOfStringsFromPayload.size();
+                    }
+                    for (int i = 0; i < countLines; i++) {
+                        mailList.add(listOfStringsFromPayload.get(i));
+                    }
+                }
 
-                String stringOfPayload = mailEntity.getPayload();
-                List<String> listOfStringsFromPayload = Arrays.asList(stringOfPayload.split("\n"));
-                if (countLines > listOfStringsFromPayload.size()) {
-                    countLines = listOfStringsFromPayload.size();
-                }
-                for (int i = 0; i < countLines; i++) {
-                    mailList.add(listOfStringsFromPayload.get(i));
-                }
                 result.addAll(mailList);
             } else {
                 result.add("-ERR no such message");

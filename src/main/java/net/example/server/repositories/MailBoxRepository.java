@@ -74,4 +74,15 @@ public class MailBoxRepository {
     public MailEntity get(int index) {
         return mailsInMailBox.get(index);
     }
+
+    public MailEntity getById(int index) {
+        MailEntity mailEntity = null;
+        for (MailEntity m : list()) {
+            if (m.getId().equals(index)) {
+                mailEntity = m;
+            }
+        }
+        return mailEntity;
+    }
+
 }

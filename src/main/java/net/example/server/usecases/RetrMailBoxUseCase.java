@@ -5,6 +5,7 @@ import net.example.server.repositories.MailBoxRepository;
 import net.example.server.repositories.MailEntity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class RetrMailBoxUseCase {
@@ -24,11 +25,14 @@ public class RetrMailBoxUseCase {
         if (sessionContext.isAuthenticated()) {
             if ((mailIndex < mailBoxRepository.list().size()) && (mailIndex >= 1)) {
                 result.add("+OK message follows");
-                MailEntity mailEntity = mailBoxRepository.get(mailIndex);
+                MailEntity mailEntity = mailBoxRepository.getById(mailIndex);
                 result.add(mailEntity.getSubject());
                 result.add(mailEntity.getFrom());
                 result.add(mailEntity.getTo());
-                result.add(mailEntity.getPayload());
+
+                List<String> bodyOfTheMail = Arrays.asList(mailEntity.getPayload().split("\n"));
+                result.addAll(bodyOfTheMail);
+
             } else {
                 result.add("-ERR no such message");
             }

@@ -20,7 +20,7 @@ public class RsetMailBoxUseCase {
 
 
     public List<String> execute() {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute RsetMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute RsetMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
             List<MailEntity> listOfAllMails = mailBoxRepository.list();

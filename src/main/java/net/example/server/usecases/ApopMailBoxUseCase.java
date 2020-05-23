@@ -22,7 +22,7 @@ public class ApopMailBoxUseCase {
     }
 
     public List<String> execute(String username, String cryptPassword) {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute ApopMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute ApopMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.getSessionState() == Pop3StateType.NOAUTHORIZATION) {
             UserEntity user = userRepository.getUserByUsername(username);

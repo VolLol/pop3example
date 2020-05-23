@@ -1,0 +1,847 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: C:\Develop\pop3example-n
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 94
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 23
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 1158
+    content: "\e[2J\e[?25l\e[m\e[H\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\e[H\e]0;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 7
+    content: "\e[?25lWindows PowerShell\e[62X\e[62C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[10X\e[10C\r\n\e[80X\e[80C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[6;1H\e[?25h"
+  - delay: 242
+    content: "\e[?25lPS C:\\Develop\\pop3example-n> \e[?25h"
+  - delay: 1357
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m.\\gradlew\e[m run\e[?25h"
+  - delay: 920
+    content: "\e[?25l\r\n\e[?25h"
+  - delay: 11
+    content: "\e[?25l\e[HWindows PowerShell\e[76X\e[76C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[24X\e[24C\r\n\e[94X\e[94C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[14X\e[14C\r\n\e[94X\e[94C\r\nPS C:\\Develop\\pop3example-n> \e[93m.\\gradlew\e[m run\e[52X\e[52C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[7;1H\e[?25h"
+  - delay: 14
+    content: "\e[?25l\e[HWindows PowerShell\e[76X\e[76C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[24X\e[24C\r\n\e[94X\e[94C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[14X\e[14C\r\n\e[94X\e[94C\r\nPS C:\\Develop\\pop3example-n> \e[93m.\\gradlew\e[m run\e[52X\e[52C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[7;1H\e[?25h"
+  - delay: 152
+    content: "\e[?25l\e[HWindows PowerShell\e[76X\e[76C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[24X\e[24C\r\n\e[94X\e[94C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[14X\e[14C\r\n\e[94X\e[94C\r\nPS C:\\Develop\\pop3example-n> \e[93m.\\gradlew\e[m run\e[52X\e[52C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[7;1H\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[HWindows PowerShell\e[76X\e[76C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[24X\e[24C\r\n\e[94X\e[94C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[14X\e[14C\r\n\e[94X\e[94C\r\nPS C:\\Develop\\pop3example-n> \e[93m.\\gradlew\e[m run\e[52X\e[52C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[7;1H\e[?25h"
+  - delay: 871
+    content: "\e[?25l\e[HWindows PowerShell\e[76X\e[76C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[24X\e[24C\r\n\e[94X\e[94C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[14X\e[14C\r\n\e[94X\e[94C\r\nPS C:\\Develop\\pop3example-n> \e[93m.\\gradlew\e[m run\e[52X\e[52C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[7;1H\e[?25h"
+  - delay: 1228
+    content: "\e[?25l\r\n\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[1m\e[97m> Connecting to Daemon\r\n\e[?25h"
+  - delay: 111
+    content: "\e[?25l\e[m\e[1m\e[97m\e[7;1H<-------------> 0% CONFIGURING [34ms]\e[m\e[57X\e[57C\e[1m\e[97m\r\n> root project\e[m\e[80X\e[80C\r\n\e[?25h"
+  - delay: 84
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<-------------> 0% EXECUTING [133ms]\e[m\e[58X\e[58C\e[1m\e[97m\r\n> :pop3proto:compileJava\e[m\e[70X\e[70C\r\n\e[?25h"
+  - delay: 99
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [231ms]\e[m\e[57X\e[57C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[?25h"
+  - delay: 92
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [331ms]\e[9;1H\e[?25h"
+  - delay: 10
+    content: "\e[m"
+  - delay: 90
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [431ms]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 92
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [532ms]\e[9;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 91
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [631ms]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 91
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [731ms]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 94
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [834ms]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 89
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [932ms]\e[9;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 93
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [1s]\e[m\e[60X\e[60C\e[9;1H\e[?25h"
+  - delay: 1000
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [2s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [3s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [4s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [5s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [6s]\e[9;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [7s]\e[9;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [8s]\e[9;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[7;1H<\e[92m===========\e[97m--> 87% EXECUTING [9s]\e[9;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 397
+    content: "\e[?25l\e[7;1H\e[94X\e[94C\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[1m\e[97m> Task :run\e[m\e[83X\e[83C\r\n[/0:0:0:0:0:0:0:1:55838] connected\e[60X\e[60C\e[1m\e[97m\r\n<\e[92m===========\e[97m--> 87% EXECUTING [9s]\e[m\e[60X\e[60C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[?25h"
+  - delay: 87
+    content: "\e[?25l\e[10;1H[/0:0:0:0:0:0:0:1:55838] ready for commands\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[1m\e[97m<\e[92m===========\e[97m--> 87% EXECUTING [9s]\e[m\e[60X\e[60C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[?25h"
+  - delay: 489
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m===========\e[97m--> 87% EXECUTING [10s]\e[13;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m===========\e[97m--> 87% EXECUTING [11s]\e[13;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m===========\e[97m--> 87% EXECUTING [12s]\e[13;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[11;1H<\e[92m===========\e[97m--> 87% EXECUTING [13s]\e[13;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 92
+    content: "\e[?25l\e[11;1H[/0:0:0:0:0:0:0:1:55838] user send data = list\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:55838] state is NOAUTHORIZATION\e[45X\e[45C\r\n[/0:0:0:0:0:0:0:1:55838] detect command = LIST\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55838] execute ListMailBoxUseCase\e[43X\e[43C\e[1m\e[97m\r\n<\e[92m===========\e[97m--> 87% EXECUTING [13s]\e[m\e[59X\e[59C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[?25h"
+  - delay: 891
+    content: "\e[?25l\e[1m\e[97m\e[15;1H<\e[92m===========\e[97m--> 87% EXECUTING [14s]\e[17;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[15;1H<\e[92m===========\e[97m--> 87% EXECUTING [15s]\e[17;1H\e[?25h"
+  - delay: 10
+    content: "\e[m"
+  - delay: 290
+    content: "\e[?25l\e[15;1H[/0:0:0:0:0:0:0:1:55838] user send data = noop\r\n\e[?25h"
+  - delay: 9
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:55838] state is NOAUTHORIZATION\e[45X\e[45C\r\n[/0:0:0:0:0:0:0:1:55838] detect command = NOOP\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55838] execute NoopMailBoxUseCase\e[43X\e[43C\e[1m\e[97m\r\n<\e[92m===========\e[97m--> 87% EXECUTING [15s]\e[m\e[59X\e[59C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[?25h"
+  - delay: 692
+    content: "\e[?25l\e[1m\e[97m\e[19;1H<\e[92m===========\e[97m--> 87% EXECUTING [16s]\e[21;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[19;1H<\e[92m===========\e[97m--> 87% EXECUTING [17s]\e[21;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 592
+    content: "\e[?25l\e[19;1H[/0:0:0:0:0:0:0:1:55838] user send data = nop\r\n\e[?25h"
+  - delay: 8
+    content: "\e[?25l[/0:0:0:0:0:0:0:1:55838] ERR unknown command\e[50X\e[50C\e[1m\e[97m\r\n<\e[92m===========\e[97m--> 87% EXECUTING [17s]\e[m\e[59X\e[59C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[?25h"
+  - delay: 393
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [18s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [19s]\e[23;1H\e[?25h"
+  - delay: 10
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [20s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [21s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [22s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [23s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [24s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 791
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55838] user send data = apop user1 7c6a180b36896a0a8c02787eeafb0e4c\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55838] state is NOAUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55838] detect command = APOP   \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55838]  execute ApopMailBoxUseCase\e[42X\e[42C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 5
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [24s]\e[m\e[59X\e[59C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 190
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [25s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [26s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [27s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [28s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [29s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [30s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 392
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55838] user send data = retr 5\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55838] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55838] detect command = RETR \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55838]  execute RetrMailBoxUseCase\e[42X\e[42C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [30s]\e[m\e[59X\e[59C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 589
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [31s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [32s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [33s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 894
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55838] user send data = stat\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55838] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55838] detect command = STAT \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55838] execute StatMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [33s]\e[m\e[59X\e[59C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 87
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [34s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [35s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [36s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [37s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 794
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55838] user send data = quit\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55838] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55838] detect command = QUIT \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55838] execute QuitMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55838] Stream closed\e[56X\e[56C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [37s]\e[m\e[59X\e[59C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 184
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [38s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [39s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [40s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [41s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [42s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [43s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [44s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 988
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [45s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [46s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [47s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [48s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [49s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [50s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [51s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [52s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [53s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [54s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [55s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 93
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] connected\e[60X\e[60C\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] ready for commands\e[51X\e[51C\r\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 7
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [55s]\e[m\e[59X\e[59C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 892
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [56s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [57s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [58s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [59s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 0s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 90
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = user user1\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is NOAUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = USER   \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute UserMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 6
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 0s]\e[m\e[57X\e[57C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 891
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 1s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 2s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 3s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 4s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 91
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = user user1\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is WAITPASS    \r\n[/0:0:0:0:0:0:0:1:55839] detect command = USER\r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute UserMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] User has incorrect state. Actual: WAITPASS Expected NOAUTHORIZATION  \r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 6
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 4s]\e[m\e[57X\e[57C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 891
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 5s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 6s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 7s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 8s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 9s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 595
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = pass 7c6a180b36896a0a8c02787eeafb0e4c\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is WAITPASS    \r\n[/0:0:0:0:0:0:0:1:55839] detect command = PASS\r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute PassMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 9s]\e[m\e[57X\e[57C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 387
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 10s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 11s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 12s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 13s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 693
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = list\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = LIST \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute ListMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 13s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 289
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 14s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 15s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 16s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 17s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 193
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = dele 3\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = DELE \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute DeleMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 17s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 789
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 18s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 19s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 20s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 21s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 289
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = list 4\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = LIST \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute ListMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 6
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 21s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 692
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 22s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 23s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 24s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 25s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 26s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 27s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 28s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 91
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = stat\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = STAT \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute StatMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 6
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 28s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 892
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 29s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 30s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 31s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 493
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = rset \r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] ERR unknown command\e[50X\e[50C\r\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 7
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 31s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 488
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 32s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 33s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 34s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 35s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 36s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 692
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = list\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] ERR unknown command\e[50X\e[50C\r\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 7
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 36s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 293
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 37s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 38s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 39s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 40s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 41s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 42s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 43s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 44s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 45s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 192
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = rset\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = RSET \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839]  execute RsetMailBoxUseCase\e[42X\e[42C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 7
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 45s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 791
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 46s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 47s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 48s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 49s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 893
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = list\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = LIST \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute ListMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 49s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 88
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 50s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 51s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 52s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 53s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 54s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 55s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 56s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 94
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = top 2 0\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP  \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 56s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 890
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 57s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 58s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [1m 59s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 0s]\e[m\e[57X\e[57C\e[23;1H\e[?25h"
+  - delay: 699
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = top 2 1\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP  \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 6
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 0s]\e[m\e[57X\e[57C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 291
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 1s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 993
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 2s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 3s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 4s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 5s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 495
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = top 2 10\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP  \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 5s]\e[m\e[57X\e[57C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 489
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 6s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 7s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 8s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 989
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 9s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 10s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 11s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 692
+    content: "\e[?25l\e[21;1H[/0:0:0:0:0:0:0:1:55839] user send data = quit\r\n\e[?25h\e[?25l[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\r\n[/0:0:0:0:0:0:0:1:55839] detect command = QUIT \r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] execute QuitMailBoxUseCase\e[43X\e[43C\r\e[?25h\e[?25l\n[/0:0:0:0:0:0:0:1:55839] Stream closed\e[56X\e[56C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 7
+    content: "\e[?25l\n\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 11s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 290
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 12s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 13s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 14s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 15s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 16s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 17s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 990
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 18s]\e[23;1H\e[?25h"
+  - delay: 8
+    content: "\e[m"
+  - delay: 994
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 19s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 991
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 20s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 992
+    content: "\e[?25l\e[1m\e[97m\e[21;1H<\e[92m===========\e[97m--> 87% EXECUTING [2m 21s]\e[23;1H\e[?25h"
+  - delay: 9
+    content: "\e[m"
+  - delay: 228
+    content: "\e[?25l\e[?25h"
+  - delay: 379
+    content: "\e[?25l\e[H[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = LIST\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55839] execute ListMailBoxUseCase\e[43X\e[43C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 0\e[45X\e[45C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 1\e[45X\e[45C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 10\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = quit\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = QUIT\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55839] execute QuitMailBoxUseCase\e[43X\e[43C\r\n[/0:0:0:0:0:0:0:1:55839] Stream closed\e[56X\e[56C\e[1m\e[97m\r\n<\e[92m===========\e[97m--> 87% EXECUTING [2m 21s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[H[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = LIST\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55839] execute ListMailBoxUseCase\e[43X\e[43C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 0\e[45X\e[45C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 1\e[45X\e[45C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 10\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = quit\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = QUIT\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55839] execute QuitMailBoxUseCase\e[43X\e[43C\r\n[/0:0:0:0:0:0:0:1:55839] Stream closed\e[56X\e[56C\e[1m\e[97m\r\n<\e[92m===========\e[97m--> 87% EXECUTING [2m 21s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\nЗавершить выполнение пакетного файла [Y(да)/N(нет)]? \e[41X\e[41C\e[23;54H\e[?25h"
+  - delay: 1254
+    content: 'Y'
+  - delay: 549
+    content: "\e[?25l\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 26
+    content: "\e[?25lPS C:\\Develop\\pop3example-n> \e[?25h"
+  - delay: 842
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[93me"
+  - delay: 245
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\bex\e[?25h"
+  - delay: 174
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;30Hexi\e[?25h"
+  - delay: 228
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[92m\e[23;30Hexit\e[?25h"
+  - delay: 385
+    content: "\e[?25l\e[m\e[H[/0:0:0:0:0:0:0:1:55839] execute ListMailBoxUseCase\e[43X\e[43C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 0\e[45X\e[45C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 1\e[45X\e[45C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = top 2 10\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = TOP\e[49X\e[49C\r\n[/0:0:0:0:0:0:0:1:55839] execute TopMailBoxUseCase\e[44X\e[44C\r\n[/0:0:0:0:0:0:0:1:55839] user send data = quit\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55839] state is AUTHORIZATION\e[47X\e[47C\r\n[/0:0:0:0:0:0:0:1:55839] detect command = QUIT\e[48X\e[48C\r\n[/0:0:0:0:0:0:0:1:55839] execute QuitMailBoxUseCase\e[43X\e[43C\r\n[/0:0:0:0:0:0:0:1:55839] Stream closed\e[56X\e[56C\e[1m\e[97m\r\n<\e[92m===========\e[97m--> 87% EXECUTING [2m 21s]\e[m\e[56X\e[56C\e[1m\e[97m\r\n> :run\e[m\e[88X\e[88C\r\nЗавершить выполнение пакетного файла [Y(да)/N(нет)]? Y\e[40X\e[40C\r\nPS C:\\Develop\\pop3example-n> \e[92mexit\e[m\e[61X\e[61C\r\n\e[94X\e[94C\e[23;34H\e[?25h"
+  - delay: 8
+    content: "\e[?25l\r\e[?25h"

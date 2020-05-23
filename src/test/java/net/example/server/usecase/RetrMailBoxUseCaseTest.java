@@ -19,16 +19,15 @@ public class RetrMailBoxUseCaseTest {
         sessionContext.setAuthenticated(true);
         MailBoxRepository mailBoxRepository = new MailBoxRepository();
         RetrMailBoxUseCase retrMailBoxUseCase = new RetrMailBoxUseCase(sessionContext, mailBoxRepository);
-        MailEntity mailEntity = mailBoxRepository.get(3);
+        MailEntity mailEntity = mailBoxRepository.getById(3);
 
         List<String> answer = retrMailBoxUseCase.execute(mailIndex);
 
-        Assert.assertEquals(5, answer.size());
+        Assert.assertEquals(6, answer.size());
         Assert.assertEquals("+OK message follows", answer.get(0));
         Assert.assertEquals(mailEntity.getSubject(), answer.get(1));
         Assert.assertEquals(mailEntity.getFrom(), answer.get(2));
         Assert.assertEquals(mailEntity.getTo(), answer.get(3));
-        Assert.assertEquals(mailEntity.getPayload(), answer.get(4));
     }
 
 

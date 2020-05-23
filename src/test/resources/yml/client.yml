@@ -1,0 +1,985 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: C:\Users\nursy
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 94
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 49
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 1408
+    content: "\e[2J\e[?25l\e[m\e[H\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\e[H\e]0;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 7
+    content: "\e[?25lWindows PowerShell\e[62X\e[62C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[10X\e[10C\r\n\e[80X\e[80C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[6;1H\e[?25h"
+  - delay: 204
+    content: "\e[?25lPS C:\\Users\\nursy> \e[?25h"
+  - delay: 3201
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[93mt"
+  - delay: 134
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\bte\e[?25h"
+  - delay: 221
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\e[6;20Htel\e[?25h"
+  - delay: 191
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\e[6;20Hteln\e[?25h"
+  - delay: 97
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelne\e[?25h"
+  - delay: 152
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[?25h"
+  - delay: 217
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m \e[?25h"
+  - delay: 784
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m l\e[?25h"
+  - delay: 166
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m lo\e[?25h"
+  - delay: 151
+    content: "\e[?25l\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m loc\e[?25h"
+  - delay: 80
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m loca\e[?25h"
+  - delay: 146
+    content: "\e[?25l\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m local\e[?25h"
+  - delay: 309
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localh\e[?25h"
+  - delay: 183
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localho\e[?25h"
+  - delay: 146
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localhos\e[?25h"
+  - delay: 94
+    content: "\e[?25l\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localhost\e[?25h"
+  - delay: 227
+    content: "\e[?25l\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localhost \e[?25h"
+  - delay: 185
+    content: "\e[?25l\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localhost \e[97m2\e[?25h"
+  - delay: 82
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localhost \e[97m21\e[?25h"
+  - delay: 169
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localhost \e[97m210\e[?25h"
+  - delay: 246
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[6;20Htelnet\e[m localhost \e[97m2101\e[?25h"
+  - delay: 742
+    content: "\e[?25l\e[m\r\n\e[?25h"
+  - delay: 13
+    content: "\e[?25l\e[HWindows PowerShell\e[76X\e[76C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[24X\e[24C\r\n\e[94X\e[94C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[14X\e[14C\r\n\e[94X\e[94C\r\nPS C:\\Users\\nursy> \e[93mtelnet\e[m localhost \e[97m2101\e[m\e[54X\e[54C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[7;1H\e[?25h"
+  - delay: 30
+    content: "\e[?25l\e[HWindows PowerShell\e[76X\e[76C\r\n(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.\e[24X\e[24C\r\n\e[94X\e[94C\r\nПопробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)\e[14X\e[14C\r\n\e[94X\e[94C\r\nPS C:\\Users\\nursy> \e[93mtelnet\e[m localhost \e[97m2101\e[m\e[54X\e[54C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[7;1H\e[?25h"
+  - delay: 6
+    content: "\e[?25lПодключение к localhost...\e]0;Telnet localhost\a\e[?25h"
+  - delay: 11
+    content: "\e[?25l\e[H\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[H\e[?25h"
+  - delay: 24
+    content: "\e[?25l\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[H\e[?25h"
+  - delay: 6
+    content: "\e[?25l+OK POP3 server ready <1896.697170952@dbc.mtview.ca.us>\r\n\e[?25h"
+  - delay: 2285
+    content: l
+  - delay: 8
+    content: "\rl"
+  - delay: 204
+    content: i
+  - delay: 9
+    content: "\bi"
+  - delay: 128
+    content: s
+  - delay: 9
+    content: "\bs"
+  - delay: 138
+    content: t
+  - delay: 10
+    content: "\bt"
+  - delay: 842
+    content: "\e[?25l\r\n-ERR no authentication\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r-ERR no authentication\r\n\e[?25h"
+  - delay: 1116
+    content: 'n'
+  - delay: 9
+    content: "\rn"
+  - delay: 412
+    content: o
+  - delay: 9
+    content: "\bo"
+  - delay: 110
+    content: o
+  - delay: 8
+    content: "\bo"
+  - delay: 194
+    content: p
+  - delay: 9
+    content: "\bp"
+  - delay: 334
+    content: "\e[?25l\r\n+Ok\e[?25h"
+  - delay: 10
+    content: "\e[?25l\r+Ok\r\n\e[?25h"
+  - delay: 866
+    content: 'n'
+  - delay: 9
+    content: "\rn"
+  - delay: 354
+    content: o
+  - delay: 9
+    content: "\bo"
+  - delay: 769
+    content: p
+  - delay: 9
+    content: "\bp"
+  - delay: 271
+    content: "\e[?25l\r\n-ERR unknown command\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r-ERR unknown command\r\n\e[?25h"
+  - delay: 1691
+    content: a
+  - delay: 9
+    content: "\ra"
+  - delay: 184
+    content: p
+  - delay: 10
+    content: "\bp"
+  - delay: 66
+    content: o
+  - delay: 8
+    content: "\bo"
+  - delay: 212
+    content: p
+  - delay: 9
+    content: "\bp"
+  - delay: 555
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 254
+    content: u
+  - delay: 9
+    content: "\bu"
+  - delay: 134
+    content: s
+  - delay: 8
+    content: "\bs"
+  - delay: 257
+    content: e
+  - delay: 9
+    content: "\be"
+  - delay: 203
+    content: r
+  - delay: 9
+    content: "\br"
+  - delay: 1292
+    content: '1'
+  - delay: 9
+    content: "\b1"
+  - delay: 427
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 544
+    content: '7'
+  - delay: 8
+    content: "\e[?25l\b7c6a18\e[?25h"
+  - delay: 10
+    content: "\e[?25l0b3689\e[?25h"
+  - delay: 8
+    content: "\e[?25l6a0a8c0278\e[?25h"
+  - delay: 9
+    content: "\e[?25l7eeafb0e4c\e[?25h"
+  - delay: 1308
+    content: "\e[?25l\r\n+OK maildrop has 6 message\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r+OK maildrop has 6 message\r\n\e[?25h"
+  - delay: 2710
+    content: r
+  - delay: 9
+    content: "\rr"
+  - delay: 87
+    content: e
+  - delay: 8
+    content: "\be"
+  - delay: 270
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 189
+    content: r
+  - delay: 8
+    content: "\br"
+  - delay: 522
+    content: ' '
+  - delay: 8
+    content: "\b "
+  - delay: 1409
+    content: '5'
+  - delay: 9
+    content: "\b5"
+  - delay: 231
+    content: "\e[?25l\r\n+OK message follows\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r+OK message follows\e[75X\e[75C\r\nSample message 5\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\nAlso note that Gradle does not process all tasks from one subproject before moving onto anothe\r\nr.\e[92X\e[92C\r\n\e[?25h"
+  - delay: 1488
+    content: s
+  - delay: 9
+    content: "\rs"
+  - delay: 190
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 133
+    content: a
+  - delay: 9
+    content: "\ba"
+  - delay: 160
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 1509
+    content: "\e[?25l\r\n+OK 6 2117\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r+OK 6 2117\r\n\e[?25h"
+  - delay: 1750
+    content: q
+  - delay: 8
+    content: "\rq"
+  - delay: 113
+    content: u
+  - delay: 9
+    content: "\bu"
+  - delay: 667
+    content: i
+  - delay: 9
+    content: "\bi"
+  - delay: 294
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 1002
+    content: "\e[?25l\e[24;1HПодключение к узлу утеряно.\r\n\e[?25h"
+  - delay: 9708
+    content: "\e[?25l\e[22;1Ht\e[?25h"
+  - delay: 11
+    content: "\rt\e]0;Telnet\a"
+  - delay: 9
+    content: "\e[?25l\e]0;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 15
+    content: "\e[?25l\e[H+OK POP3 server ready <1896.697170952@dbc.mtview.ca.us>\e[39X\e[39C\r\nlist\e[90X\e[90C\r\n-ERR no authentication\e[72X\e[72C\r\nnoop\e[90X\e[90C\r\n+Ok\e[91X\e[91C\r\nnop\e[91X\e[91C\r\n-ERR unknown command\e[74X\e[74C\r\napop user1 7c6a180b36896a0a8c02787eeafb0e4c\e[51X\e[51C\r\n+OK maildrop has 6 message\e[68X\e[68C\r\nretr 5\e[88X\e[88C\r\n+OK message follows\e[75X\e[75C\r\nSample message 5\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\nAlso note that Gradle does not process all tasks from one subproject before moving onto anothe\r\nr.\e[92X\e[92C\r\nstat\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\nquit\e[90X\e[90C\r\nt\e[93X\e[93C\r\n\e[94X\e[94C\r\nПодключение к узлу утеряно.\e[67X\e[67C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[23;1H\e[?25h"
+  - delay: 11
+    content: "\e[?25lPS C:\\Users\\nursy> \e[?25h"
+  - delay: 138
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[93me"
+  - delay: 857
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\b \b"
+  - delay: 625
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[93mt"
+  - delay: 110
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\bte\e[?25h"
+  - delay: 286
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htel\e[?25h"
+  - delay: 211
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Hteln\e[?25h"
+  - delay: 124
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelne\e[?25h"
+  - delay: 159
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[?25h"
+  - delay: 255
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m \e[?25h"
+  - delay: 1282
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m l\e[?25h"
+  - delay: 169
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m lo\e[?25h"
+  - delay: 228
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m loc\e[?25h"
+  - delay: 93
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m loca\e[?25h"
+  - delay: 130
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m local\e[?25h"
+  - delay: 278
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localh\e[?25h"
+  - delay: 191
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localho\e[?25h"
+  - delay: 128
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localhos\e[?25h"
+  - delay: 128
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localhost\e[?25h"
+  - delay: 230
+    content: "\e[?25l\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localhost \e[?25h"
+  - delay: 171
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localhost \e[97m2\e[?25h"
+  - delay: 97
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localhost \e[97m21\e[?25h"
+  - delay: 204
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localhost \e[97m210\e[?25h"
+  - delay: 218
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[23;20Htelnet\e[m localhost \e[97m2101\e[?25h"
+  - delay: 1010
+    content: "\e[?25l\e[m\r\n\e[?25h"
+  - delay: 12
+    content: "\e[?25l\e[H+OK POP3 server ready <1896.697170952@dbc.mtview.ca.us>\e[39X\e[39C\r\nlist\e[90X\e[90C\r\n-ERR no authentication\e[72X\e[72C\r\nnoop\e[90X\e[90C\r\n+Ok\e[91X\e[91C\r\nnop\e[91X\e[91C\r\n-ERR unknown command\e[74X\e[74C\r\napop user1 7c6a180b36896a0a8c02787eeafb0e4c\e[51X\e[51C\r\n+OK maildrop has 6 message\e[68X\e[68C\r\nretr 5\e[88X\e[88C\r\n+OK message follows\e[75X\e[75C\r\nSample message 5\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\nAlso note that Gradle does not process all tasks from one subproject before moving onto anothe\r\nr.\e[92X\e[92C\r\nstat\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\nquit\e[90X\e[90C\r\nt\e[93X\e[93C\r\nPS C:\\Users\\nursy> \e[93mtelnet\e[m localhost \e[97m2101\e[m\e[54X\e[54C\r\nПодключение к узлу утеряно.\e[67X\e[67C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[24;1H\e[?25h"
+  - delay: 20
+    content: "\e[?25l\e[H+OK POP3 server ready <1896.697170952@dbc.mtview.ca.us>\e[39X\e[39C\r\nlist\e[90X\e[90C\r\n-ERR no authentication\e[72X\e[72C\r\nnoop\e[90X\e[90C\r\n+Ok\e[91X\e[91C\r\nnop\e[91X\e[91C\r\n-ERR unknown command\e[74X\e[74C\r\napop user1 7c6a180b36896a0a8c02787eeafb0e4c\e[51X\e[51C\r\n+OK maildrop has 6 message\e[68X\e[68C\r\nretr 5\e[88X\e[88C\r\n+OK message follows\e[75X\e[75C\r\nSample message 5\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\nAlso note that Gradle does not process all tasks from one subproject before moving onto anothe\r\nr.\e[92X\e[92C\r\nstat\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\nquit\e[90X\e[90C\r\nt\e[93X\e[93C\r\nPS C:\\Users\\nursy> \e[93mtelnet\e[m localhost \e[97m2101\e[m\e[54X\e[54C\r\nПодключение к узлу утеряно.\e[67X\e[67C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[24;1H\e[?25h"
+  - delay: 11
+    content: "\e[?25l\e[H\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[19X\e[19C\e[93m      \e[m\e[11X\e[11C\e[97m    \e[m\e[54X\e[54C\r\n\e[27X\e[27C\e[67X\e[67C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[24;27H\e]0;Telnet localhost\a\e[?25h"
+  - delay: 7
+    content: "\e[?25l\e[H+OK POP3 server ready <1896.697170952@dbc.mtview.ca.us>\e[39X\e[39C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\e[2;1H\e[?25h"
+  - delay: 1394
+    content: u
+  - delay: 9
+    content: "\ru"
+  - delay: 199
+    content: s
+  - delay: 9
+    content: "\bs"
+  - delay: 175
+    content: e
+  - delay: 10
+    content: "\be"
+  - delay: 138
+    content: r
+  - delay: 9
+    content: "\br"
+  - delay: 1002
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 381
+    content: u
+  - delay: 9
+    content: "\bu"
+  - delay: 128
+    content: s
+  - delay: 8
+    content: "\bs"
+  - delay: 169
+    content: e
+  - delay: 8
+    content: "\be"
+  - delay: 130
+    content: r
+  - delay: 9
+    content: "\br"
+  - delay: 194
+    content: '1'
+  - delay: 9
+    content: "\b1"
+  - delay: 1017
+    content: "\e[?25l\r\n+Ok user1 name is a valid mailbox\e[?25h"
+  - delay: 8
+    content: "\e[?25l\r+Ok user1 name is a valid mailbox\r\n\e[?25h"
+  - delay: 909
+    content: u
+  - delay: 9
+    content: "\ru"
+  - delay: 138
+    content: s
+  - delay: 9
+    content: "\bs"
+  - delay: 250
+    content: e
+  - delay: 8
+    content: "\be"
+  - delay: 155
+    content: r
+  - delay: 8
+    content: "\br"
+  - delay: 631
+    content: ' '
+  - delay: 8
+    content: "\b "
+  - delay: 526
+    content: u
+  - delay: 9
+    content: "\bu"
+  - delay: 364
+    content: s
+  - delay: 8
+    content: "\bs"
+  - delay: 123
+    content: e
+  - delay: 9
+    content: "\be"
+  - delay: 146
+    content: r
+  - delay: 9
+    content: "\br"
+  - delay: 214
+    content: '1'
+  - delay: 10
+    content: "\b1"
+  - delay: 439
+    content: "\e[?25l\r\n-ERR not correct state\e[?25h"
+  - delay: 8
+    content: "\e[?25l\r-ERR not correct state\r\n\e[?25h"
+  - delay: 2855
+    content: p
+  - delay: 8
+    content: "\rp"
+  - delay: 105
+    content: a
+  - delay: 9
+    content: "\ba"
+  - delay: 264
+    content: s
+  - delay: 9
+    content: "\bs"
+  - delay: 145
+    content: s
+  - delay: 9
+    content: "\bs"
+  - delay: 399
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 367
+    content: '7'
+  - delay: 8
+    content: "\e[?25l\b7c6a18\e[?25h"
+  - delay: 9
+    content: "\e[?25l0b3689\e[?25h"
+  - delay: 8
+    content: "\e[?25l\b96a0\e[?25h"
+  - delay: 9
+    content: "\e[?25la8c0278\e[?25h"
+  - delay: 9
+    content: "\e[?25l7eeafb0e4c\e[?25h"
+  - delay: 1258
+    content: "\e[?25l\r\n+OK successful login\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r+OK successful login\r\n\e[?25h"
+  - delay: 853
+    content: l
+  - delay: 9
+    content: "\rl"
+  - delay: 244
+    content: i
+  - delay: 8
+    content: "\bi"
+  - delay: 310
+    content: s
+  - delay: 8
+    content: "\bs"
+  - delay: 401
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 2236
+    content: "\e[?25l\r\n+OK 6 2117\e[?25h"
+  - delay: 8
+    content: "\e[?25l\r+OK 6 2117\r\n1 293     \r\n2 293     \r\n3 293     \r\n4 293     \r\n5 293     \r\n6 652     \r\n\e[?25h"
+  - delay: 1263
+    content: d
+  - delay: 8
+    content: "\rd"
+  - delay: 82
+    content: e
+  - delay: 9
+    content: "\be"
+  - delay: 195
+    content: l
+  - delay: 9
+    content: "\bl"
+  - delay: 144
+    content: e
+  - delay: 9
+    content: "\be"
+  - delay: 762
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 194
+    content: '3'
+  - delay: 9
+    content: "\b3"
+  - delay: 842
+    content: "\e[?25l\r\n+Ok message 3 is deleted\e[?25h"
+  - delay: 8
+    content: "\e[?25l\r+Ok message 3 is deleted\r\n\e[?25h"
+  - delay: 1153
+    content: l
+  - delay: 9
+    content: "\rl"
+  - delay: 194
+    content: i
+  - delay: 9
+    content: "\bi"
+  - delay: 229
+    content: s
+  - delay: 8
+    content: "\bs"
+  - delay: 534
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 732
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 224
+    content: '4'
+  - delay: 8
+    content: "\b4"
+  - delay: 929
+    content: "\e[?25l\r\n+OK 5 1824\e[?25h"
+  - delay: 8
+    content: "\e[?25l\r+OK 5 1824\r\n1 293     \r\n2 293     \r\n4 293     \r\n5 293     \r\n\e[?25h"
+  - delay: 4318
+    content: s
+  - delay: 9
+    content: "\rs"
+  - delay: 199
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 314
+    content: a
+  - delay: 10
+    content: "\ba"
+  - delay: 917
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 1051
+    content: "\e[?25l\r\n+OK 5 1824\e[?25h"
+  - delay: 8
+    content: "\e[?25l\r+OK 5 1824\r\n\e[?25h"
+  - delay: 951
+    content: r
+  - delay: 9
+    content: "\rr"
+  - delay: 184
+    content: s
+  - delay: 9
+    content: "\bs"
+  - delay: 182
+    content: e
+  - delay: 9
+    content: "\be"
+  - delay: 901
+    content: t
+  - delay: 10
+    content: "\bt"
+  - delay: 328
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 746
+    content: "\e[?25l\r\n-ERR unknown command\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r-ERR unknown command\r\n\e[?25h"
+  - delay: 1358
+    content: l
+  - delay: 9
+    content: "\rl"
+  - delay: 200
+    content: i
+  - delay: 9
+    content: "\bi"
+  - delay: 149
+    content: s
+  - delay: 8
+    content: "\bs"
+  - delay: 296
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 3228
+    content: "\e[?25l\r\n-ERR unknown command\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r-ERR unknown command\r\n\e[?25h"
+  - delay: 5143
+    content: r
+  - delay: 8
+    content: "\rr"
+  - delay: 184
+    content: s
+  - delay: 9
+    content: "\bs"
+  - delay: 144
+    content: e
+  - delay: 9
+    content: "\be"
+  - delay: 507
+    content: t
+  - delay: 9
+    content: "\bt"
+  - delay: 2450
+    content: "\e[?25l\r\n+OK maildrop has 6 messages\e[?25h"
+  - delay: 10
+    content: "\e[?25l\r+OK maildrop has 6 messages\r\n\e[?25h"
+  - delay: 1960
+    content: l
+  - delay: 9
+    content: "\rl"
+  - delay: 226
+    content: i
+  - delay: 8
+    content: "\bi"
+  - delay: 148
+    content: s
+  - delay: 8
+    content: "\bs"
+  - delay: 146
+    content: t
+  - delay: 8
+    content: "\bt"
+  - delay: 2151
+    content: "\e[?25l\r\n+OK 6 2117\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r+OK 6 2117\r\n1 293     \r\n2 293     \r\n3 293     \r\n4 293     \r\n5 293     \r\n6 652     \r\n\e[?25h"
+  - delay: 2682
+    content: t
+  - delay: 9
+    content: "\rt"
+  - delay: 154
+    content: o
+  - delay: 9
+    content: "\bo"
+  - delay: 63
+    content: p
+  - delay: 9
+    content: "\bp"
+  - delay: 732
+    content: ' '
+  - delay: 8
+    content: "\b "
+  - delay: 657
+    content: '2'
+  - delay: 9
+    content: "\b2"
+  - delay: 1160
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 251
+    content: '0'
+  - delay: 8
+    content: "\b0"
+  - delay: 396
+    content: "\e[?25l\r\n+OK top of message follows\e[?25h"
+  - delay: 9
+    content: "\e[?25l\r+OK top of message follows       \r\nSample message 2\e[17X\e[17C\r\nAuthor <author@example.com>      \r\nRecipient <recipient@example.com>\r\n\e[?25h"
+  - delay: 1840
+    content: t
+  - delay: 9
+    content: "\rt"
+  - delay: 234
+    content: o
+  - delay: 8
+    content: "\bo"
+  - delay: 67
+    content: p
+  - delay: 9
+    content: "\bp"
+  - delay: 397
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 480
+    content: '2'
+  - delay: 9
+    content: "\b2"
+  - delay: 496
+    content: ' '
+  - delay: 9
+    content: "\b "
+  - delay: 433
+    content: '1'
+  - delay: 9
+    content: "\b1"
+  - delay: 651
+    content: "\e[?25l\r\n+OK top of message follows\e[?25h"
+  - delay: 11
+    content: "\e[?25l\e[Huser user1\e[84X\e[84C\r\n-ERR not correct state\e[72X\e[72C\r\npass 7c6a180b36896a0a8c02787eeafb0e4c\e[57X\e[57C\r\n+OK successful login\e[74X\e[74C\r\nlist\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n3 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ndele 3\e[88X\e[88C\r\n+Ok message 3 is deleted\e[70X\e[70C\r\nlist 4\e[88X\e[88C\r\n+OK 5 1824\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\nstat\e[90X\e[90C\r\n+OK 5 1824\e[84X\e[84C\r\nrset\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nlist\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nrset\e[90X\e[90C\r\n+OK maildrop has 6 messages\e[67X\e[67C\r\nlist\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n3 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ntop 2 0\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\ntop 2 1\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 1663
+    content: "t\r"
+  - delay: 9
+    content: t
+  - delay: 194
+    content: "o\b"
+  - delay: 9
+    content: o
+  - delay: 68
+    content: "p\b"
+  - delay: 9
+    content: p
+  - delay: 602
+    content: " \b"
+  - delay: 9
+    content: ' '
+  - delay: 580
+    content: "2\b"
+  - delay: 8
+    content: '2'
+  - delay: 476
+    content: " \b"
+  - delay: 9
+    content: ' '
+  - delay: 184
+    content: "1\b"
+  - delay: 9
+    content: '1'
+  - delay: 113
+    content: "0\b"
+  - delay: 9
+    content: '0'
+  - delay: 798
+    content: "\e[?25l\e[H-ERR not correct state\e[72X\e[72C\r\npass 7c6a180b36896a0a8c02787eeafb0e4c\e[57X\e[57C\r\n+OK successful login\e[74X\e[74C\r\nlist\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n3 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ndele 3\e[88X\e[88C\r\n+Ok message 3 is deleted\e[70X\e[70C\r\nlist 4\e[88X\e[88C\r\n+OK 5 1824\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\nstat\e[90X\e[90C\r\n+OK 5 1824\e[84X\e[84C\r\nrset\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nlist\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nrset\e[90X\e[90C\r\n+OK maildrop has 6 messages\e[67X\e[67C\r\nlist\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n3 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ntop 2 0\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\ntop 2 1\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\ntop 2 10\e[86X\e[86C\r\n\e[94X\e[94C\e[49;9H\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[H4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ndele 3\e[88X\e[88C\r\n+Ok message 3 is deleted\e[70X\e[70C\r\nlist 4\e[88X\e[88C\r\n+OK 5 1824\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\nstat\e[90X\e[90C\r\n+OK 5 1824\e[84X\e[84C\r\nrset\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nlist\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nrset\e[90X\e[90C\r\n+OK maildrop has 6 messages\e[67X\e[67C\r\nlist\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n3 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ntop 2 0\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\ntop 2 1\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\ntop 2 10\e[86X\e[86C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\nAlso note that Gradle does not process all tasks from one subproject before moving onto anothe\r\nr.\e[92X\e[92C\r\n\e[94X\e[94C\r\e[?25h"
+  - delay: 1421
+    content: "q\r"
+  - delay: 9
+    content: q
+  - delay: 143
+    content: "u\b"
+  - delay: 9
+    content: u
+  - delay: 721
+    content: "i\b"
+  - delay: 9
+    content: i
+  - delay: 418
+    content: "t\b"
+  - delay: 9
+    content: t
+  - delay: 3463
+    content: "\e[?25l\e[H5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ndele 3\e[88X\e[88C\r\n+Ok message 3 is deleted\e[70X\e[70C\r\nlist 4\e[88X\e[88C\r\n+OK 5 1824\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\nstat\e[90X\e[90C\r\n+OK 5 1824\e[84X\e[84C\r\nrset\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nlist\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nrset\e[90X\e[90C\r\n+OK maildrop has 6 messages\e[67X\e[67C\r\nlist\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n3 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ntop 2 0\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\ntop 2 1\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\ntop 2 10\e[86X\e[86C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\nAlso note that Gradle does not process all tasks from one subproject before moving onto anothe\r\nr.\e[92X\e[92C\r\nquit\e[90X\e[90C\r\n\e[94X\e[94C\e[49;5H\e[?25h\r\e[?25l\n\e[94X\e[94C\r\e[?25h\e[?25l\nПодключение к узлу утеряно.\e[67X\e[67C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 2778
+    content: "e\r"
+  - delay: 9
+    content: "e\e]0;Telnet\a"
+  - delay: 12
+    content: "\e[?25l\e]0;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 6
+    content: "\e[?25l\e[H+Ok message 3 is deleted\e[70X\e[70C\r\nlist 4\e[88X\e[88C\r\n+OK 5 1824\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\nstat\e[90X\e[90C\r\n+OK 5 1824\e[84X\e[84C\r\nrset\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nlist\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nrset\e[90X\e[90C\r\n+OK maildrop has 6 messages\e[67X\e[67C\r\nlist\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n3 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ntop 2 0\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\ntop 2 1\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\ntop 2 10\e[86X\e[86C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\nAlso note that Gradle does not process all tasks from one subproject before moving onto anothe\r\nr.\e[92X\e[92C\r\nquit\e[90X\e[90C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\nПодключение к узлу утеряно.\e[67X\e[67C\r\ne\e[93X\e[93C\r\e[?25h\e[?25l\n\e[94X\e[94C\r\e[?25h"
+  - delay: 9
+    content: "\e[?25lPS C:\\Users\\nursy> \e[?25h"
+  - delay: 250
+    content: "\e[?25l\e[?25h"
+  - delay: 8
+    content: "\e[93mx"
+  - delay: 84
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 8
+    content: "\e[?25l\e[93m\bxi\e[?25h"
+  - delay: 335
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 10
+    content: "\e[?25l\e[93m\e[49;20Hxit\e[?25h"
+  - delay: 495
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[49;20Hxi\e[m \b\e[?25h"
+  - delay: 162
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[49;20Hx\e[m \b\e[?25h"
+  - delay: 128
+    content: "\e[?25l\e[?25h"
+  - delay: 9
+    content: "\b \b"
+  - delay: 476
+    content: "\e[?25l\e[?25h"
+  - delay: 10
+    content: "\e[93me"
+  - delay: 228
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\bex\e[?25h"
+  - delay: 268
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[93m\e[49;20Hexi\e[?25h"
+  - delay: 374
+    content: "\e[?25l\e[m\e[?25h"
+  - delay: 9
+    content: "\e[?25l\e[92m\e[49;20Hexit\e[?25h"
+  - delay: 472
+    content: "\e[?25l\e[m\e[H+OK 5 1824\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\nstat\e[90X\e[90C\r\n+OK 5 1824\e[84X\e[84C\r\nrset\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nlist\e[90X\e[90C\r\n-ERR unknown command\e[74X\e[74C\r\nrset\e[90X\e[90C\r\n+OK maildrop has 6 messages\e[67X\e[67C\r\nlist\e[90X\e[90C\r\n+OK 6 2117\e[84X\e[84C\r\n1 293\e[89X\e[89C\r\n2 293\e[89X\e[89C\r\n3 293\e[89X\e[89C\r\n4 293\e[89X\e[89C\r\n5 293\e[89X\e[89C\r\n6 652\e[89X\e[89C\r\ntop 2 0\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\ntop 2 1\e[87X\e[87C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\ntop 2 10\e[86X\e[86C\r\n+OK top of message follows\e[68X\e[68C\r\nSample message 2\e[78X\e[78C\r\nAuthor <author@example.com>\e[67X\e[67C\r\nRecipient <recipient@example.com>\e[61X\e[61C\r\nNotice how each subproject is prefixed in the output, so that you know which task from which p\r\nroject is being executed.\e[69X\e[69C\r\nAlso note that Gradle does not process all tasks from one subproject before moving onto anothe\r\nr.\e[92X\e[92C\r\nquit\e[90X\e[90C\r\n\e[94X\e[94C\r\n\e[94X\e[94C\r\nПодключение к узлу утеряно.\e[67X\e[67C\r\ne\e[93X\e[93C\r\nPS C:\\Users\\nursy> \e[92mexit\e[m\e[71X\e[71C\r\n\e[94X\e[94C\e[49;24H\e[?25h"
+  - delay: 6
+    content: "\e[?25l\r\e[?25h"

@@ -20,7 +20,7 @@ public class RetrMailBoxUseCase {
     }
 
     public List<String> execute(int mailIndex) {
-        System.out.println("[" + sessionContext.getClientIP() + "] " + " execute RetrMailBoxUseCase");
+        System.out.println("[" + sessionContext.getClientIP() + "] " + "execute RetrMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
             if ((mailIndex < mailBoxRepository.list().size()) && (mailIndex >= 1)) {

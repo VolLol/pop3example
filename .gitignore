@@ -5,3 +5,5 @@
 /pop3proto/build/
 /pop3proto/out/production/classes/
 /pop3proto/out/test/classes/
+/build
+/.idea

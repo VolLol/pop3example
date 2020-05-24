@@ -20,7 +20,10 @@ gradlew run
 ```
 
 Так же можно посмотреть запись демонстрации работы.
-![Server works](src/test/resources/gif/server.gif)
+## Демонстрация работы клиента:
 ![Client works](src/test/resources/gif/client.gif)
+
+## Демонстрация работы сервера:
+![Server works](src/test/resources/gif/server.gif)
 
 

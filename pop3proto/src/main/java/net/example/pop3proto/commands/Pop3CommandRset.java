@@ -7,4 +7,9 @@ public class Pop3CommandRset implements Pop3Command {
     public Pop3CommandType getCommandType() {
         return Pop3CommandType.RSET;
     }
+
+    @Override
+    public void parseAndSetArgumentsFromString(String arguments) {
+
+    }
 }

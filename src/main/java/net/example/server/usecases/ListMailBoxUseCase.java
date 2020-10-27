@@ -6,6 +6,8 @@ import net.example.server.repositories.MailEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ListMailBoxUseCase {
 
@@ -22,27 +24,26 @@ public class ListMailBoxUseCase {
         System.out.println("[" + sessionContext.getClientIP() + "] " + "execute ListMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
-            List<MailEntity> list = new ArrayList<>();
+            List<MailEntity> list = mailBoxRepository.list().stream()
+                    .filter(mailEntity -> !mailEntity.isDeleted()).collect(Collectors.toList());
 
-            for (MailEntity m : mailBoxRepository.list()) {
-                if (!m.isDeleted()) {
-                    list.add(m);
-                }
-            }
             if (!list.isEmpty()) {
                 int countOfMessage = list.size();
-                int intCount;
-                int allCountOfBites = 0;
-                List<Integer> sizeOfMessage = new ArrayList<>();
-                for (MailEntity mailEntity : list) {
-                    intCount = mailEntity.getSubject().getBytes().length;
-                    intCount = intCount + mailEntity.getFrom().getBytes().length;
-                    intCount = intCount + mailEntity.getTo().getBytes().length;
-                    intCount = intCount + mailEntity.getPayload().getBytes().length;
-                    allCountOfBites = allCountOfBites + intCount;
-                    sizeOfMessage.add(intCount);
-                }
-                result.add("+OK " + countOfMessage + " " + allCountOfBites);
+
+                List<Integer> sizeOfMessage = list.stream()
+                        .map(
+                                mailEntity -> Stream.of(
+                                        mailEntity.getSubject(),
+                                        mailEntity.getFrom(),
+                                        mailEntity.getTo(),
+                                        mailEntity.getPayload())
+                                        .map(i -> i.getBytes().length).reduce(0, Integer::sum))
+                        .collect(Collectors.toList());
+
+
+                int allCountOfBites = sizeOfMessage.stream().mapToInt(Integer::intValue).sum();
+
+                Stream.of("+OK " + countOfMessage + " " + allCountOfBites).forEachOrdered(result::add);
                 if (limit > list.size()) {
                     limit = list.size();
                 }
@@ -60,12 +61,9 @@ public class ListMailBoxUseCase {
             } else {
                 result.add("-ERR no messages");
             }
-
-
         } else {
             result.add("-ERR no authentication");
         }
-
         return result;
     }
 }

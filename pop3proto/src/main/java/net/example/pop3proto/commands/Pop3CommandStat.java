@@ -7,4 +7,9 @@ public class Pop3CommandStat implements Pop3Command {
     public Pop3CommandType getCommandType() {
         return Pop3CommandType.STAT;
     }
+
+    @Override
+    public void parseAndSetArgumentsFromString(String arguments) {
+
+    }
 }

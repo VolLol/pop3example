@@ -23,16 +23,15 @@ public class RetrMailBoxUseCase {
         System.out.println("[" + sessionContext.getClientIP() + "] " + "execute RetrMailBoxUseCase");
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
-            if ((mailIndex < mailBoxRepository.list().size()) && (mailIndex >= 1)) {
+            MailEntity mailEntity = mailBoxRepository.getById(mailIndex);
+            if (mailEntity != null) {
                 result.add("+OK message follows");
-                MailEntity mailEntity = mailBoxRepository.getById(mailIndex);
                 result.add(mailEntity.getSubject());
                 result.add(mailEntity.getFrom());
                 result.add(mailEntity.getTo());
 
                 List<String> bodyOfTheMail = Arrays.asList(mailEntity.getPayload().split("\n"));
                 result.addAll(bodyOfTheMail);
-
             } else {
                 result.add("-ERR no such message");
             }

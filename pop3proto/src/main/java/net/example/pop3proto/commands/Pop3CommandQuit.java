@@ -7,4 +7,9 @@ public class Pop3CommandQuit implements Pop3Command {
     public Pop3CommandType getCommandType() {
         return Pop3CommandType.QUIT;
     }
+
+    @Override
+    public void parseAndSetArgumentsFromString(String arguments) {
+
+    }
 }

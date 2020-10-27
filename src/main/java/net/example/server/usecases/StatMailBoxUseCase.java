@@ -6,6 +6,8 @@ import net.example.server.repositories.MailEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StatMailBoxUseCase {
 
@@ -22,21 +24,23 @@ public class StatMailBoxUseCase {
         ArrayList<String> result = new ArrayList<>();
         if (sessionContext.isAuthenticated()) {
 
-            List<MailEntity> list = mailBoxRepository.list();
+            List<MailEntity> list = mailBoxRepository.list().stream()
+                    .filter(mailEntity -> !mailEntity.isDeleted())
+                    .collect(Collectors.toList());
 
-            int countOfMails = 0;
-            int intCount;
-            int allCountOfBites = 0;
-            for (MailEntity mailEntity : list) {
-                if (!mailEntity.isDeleted()) {
-                    intCount = mailEntity.getSubject().getBytes().length;
-                    intCount = intCount + mailEntity.getFrom().getBytes().length;
-                    intCount = intCount + mailEntity.getTo().getBytes().length;
-                    intCount = intCount + mailEntity.getPayload().getBytes().length;
-                    allCountOfBites = allCountOfBites + intCount;
-                    countOfMails++;
-                }
-            }
+            Integer allCountOfBites = list.stream()
+                    .map(
+                            mailEntity -> Stream.of(
+                                    mailEntity.getSubject(),
+                                    mailEntity.getFrom(),
+                                    mailEntity.getTo(),
+                                    mailEntity.getPayload())
+                                    .map(i -> i.getBytes().length)
+                                    .reduce(0, Integer::sum))
+                    .reduce(0, Integer::sum);
+
+            int countOfMails = list.size();
+
             result.add("+OK " + countOfMails + " " + allCountOfBites);
         } else {
             result.add("-ERR user not authenticated");

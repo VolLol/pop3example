@@ -7,4 +7,9 @@ public class Pop3CommandNoop implements Pop3Command {
     public Pop3CommandType getCommandType() {
         return Pop3CommandType.NOOP;
     }
+
+    @Override
+    public void parseAndSetArgumentsFromString(String arguments) {
+
+    }
 }
